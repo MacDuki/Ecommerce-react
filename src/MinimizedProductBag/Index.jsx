@@ -4,7 +4,7 @@ import { IoIosRemoveCircleOutline } from "react-icons/io";
 import { shopContext } from "../Context/Index";
 import "./MinimizedProductBag.css";
 
-function MinimizedProductBag(product, key) {
+function MinimizedProductBag(product) {
 	const { cartProducts, setCartProducts, cartNumber, setCartNumber } =
 		React.useContext(shopContext);
 

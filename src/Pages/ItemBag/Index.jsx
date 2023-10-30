@@ -1,6 +1,7 @@
 import React from "react";
 import { shopContext } from "../../Context/Index";
-import { MinimizedProductBag } from "../../MinimizedProductBag";
+import { MinimizedProductBag } from "../../MinimizedProductBag/Index";
+import { totalPrice } from "../../functions/totalPrice";
 import "./ItemBag.css";
 
 function ItemBag() {
@@ -14,10 +15,16 @@ function ItemBag() {
 
 	return (
 		<>
-			<section className='itembag-section'>
-				{realCartProducts.map((product) => (
-					<MinimizedProductBag key={product.id} product={product} />
-				))}
+			<section className='itembag-section-container'>
+				<div className='itembag-section'>
+					{realCartProducts.map((product) => (
+						<MinimizedProductBag key={product.id} product={product} />
+					))}
+				</div>
+				<footer className='footer-total-price'>
+					<span>Total:</span>
+					<span>{totalPrice(realCartProducts)}$</span>
+				</footer>
 			</section>
 		</>
 	);

@@ -1,23 +1,36 @@
 import React from "react";
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
 import { shopContext } from "../Context/Index";
 import "./MinimizedProduct.css";
 
 function MinimizedProduct(product) {
-	const { plusCartOne, showMaximizedProduct, setProductInfo } =
+	const { plusCartOne, showMaximizedProduct, setProductInfo, cartProducts } =
 		React.useContext(shopContext);
 	function showProduct(productInfo) {
 		showMaximizedProduct();
 		setProductInfo(productInfo);
 	}
+
+	function isAdded(id) {
+		const isInCart =
+			cartProducts.filter((product) => product.id === id).length > 0;
+		if (!isInCart) {
+			return (
+				<AiOutlinePlus
+					onClick={() => {
+						plusCartOne(product?.product);
+					}}
+					className='add-button'
+				/>
+			);
+		} else {
+			return <AiOutlineCheckCircle className='check-button' />;
+		}
+	}
+
 	return (
 		<div className='minimized-product-second-container'>
-			<AiOutlinePlus
-				onClick={() => {
-					plusCartOne(product?.product);
-				}}
-				className='add-button'
-			/>
+			{isAdded(product.product.id)}
 			<figure className=''>
 				<img
 					onClick={() => showProduct(product.product)}

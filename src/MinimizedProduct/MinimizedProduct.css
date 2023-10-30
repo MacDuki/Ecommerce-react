@@ -46,6 +46,15 @@
 	background-color: #ffffff;
 	cursor: pointer;
 }
+.check-button {
+	position: absolute;
+	top: 0.25rem;
+	right: 0.25rem;
+	border-radius: 9999px;
+	width: 1rem;
+	height: 1rem;
+	background-color: #a5dee6;
+}
 
 .minimized-product-second-container h4 {
 	margin-left: 0.25rem;

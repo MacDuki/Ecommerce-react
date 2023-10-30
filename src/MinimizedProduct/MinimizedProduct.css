@@ -1,0 +1,77 @@
+.minimized-product-second-container {
+	flex-direction: column;
+	justify-content: center;
+	justify-content: center;
+	border-radius: 0.5rem;
+	padding-bottom: 1rem;
+	width: 16rem;
+	height: 16rem;
+	background-color: #ffffff;
+	position: relative;
+}
+
+.minimized-product-second-container figure {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 0.7rem;
+	justify-content: center;
+	align-items: center;
+	width: 10rem;
+	height: 10rem;
+	position: relative;
+}
+
+.minimized-product-second-container div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0.5rem;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-right: 0.25rem;
+	margin-left: 0.25rem;
+	gap: 3rem;
+	height: 1.8rem;
+	border-radius: 0.5rem;
+	background-color: #ebe6ea;
+}
+
+.add-button {
+	position: absolute;
+	top: 0.25rem;
+	right: 0.25rem;
+	border-radius: 9999px;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+
+.minimized-product-second-container h4 {
+	margin-left: 0.25rem;
+	padding: 0 5px;
+	display: inline;
+	position: relative;
+	border-radius: 0.5rem;
+	width: auto;
+	height: auto;
+	text-align: center;
+	width: fit-content;
+	margin-bottom: 0;
+	background-color: #ebe6ea;
+}
+
+.product-img {
+	padding-top: 2.5rem;
+	height: fit-content;
+	max-width: 10rem;
+	max-height: 10rem;
+	cursor: pointer;
+}
+
+.minimized-product-second-container div h2 {
+	font-size: medium;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

@@ -9,11 +9,13 @@ function MaximizedProduct() {
 
 	return showMaximized ? (
 		<>
-			<section className='maximized-product'>
+			<div className='close-button-container'>
 				<AiOutlineClose
 					onClick={showMaximizedProduct}
 					className='close-button'
 				/>
+			</div>
+			<section className='maximized-product'>
 				<div className='img-container-maximized'>
 					<img className='' src={productInfo.image}></img>
 				</div>

@@ -30,6 +30,7 @@ function ShopContextProvider({ children }) {
 			value={{
 				plusCartOne,
 				cartNumber,
+				setCartNumber,
 				showMaximizedProduct,
 				showMaximized,
 				productInfo,

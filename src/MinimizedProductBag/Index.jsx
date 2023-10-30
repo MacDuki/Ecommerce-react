@@ -5,25 +5,29 @@ import { shopContext } from "../Context/Index";
 import "./MinimizedProductBag.css";
 
 function MinimizedProductBag(product, key) {
-	const { cartProducts, setCartProducts } = React.useContext(shopContext);
+	const { cartProducts, setCartProducts, cartNumber, setCartNumber } =
+		React.useContext(shopContext);
 
 	function removeCartOne(productData) {
 		const updateProducts = [...cartProducts];
-
+		setCartNumber(cartNumber - 1);
 		const updatedProducts = updateProducts.filter(
-			(product) => key !== productData.id
+			(product) => productData.id !== product.id
 		);
+
 		setCartProducts(updatedProducts);
 	}
 
 	return (
 		<div className='product-container'>
-			<IoIosRemoveCircleOutline
-				onClick={() => {
-					removeCartOne(product?.product);
-				}}
-				className=''
-			/>
+			<div className='icon-container'>
+				<IoIosRemoveCircleOutline
+					onClick={() => {
+						removeCartOne(product?.product);
+					}}
+					className='remove-button'
+				/>
+			</div>
 			<div className='img-container'>
 				<div className=''>
 					<img className='' src={product?.product.image}></img>

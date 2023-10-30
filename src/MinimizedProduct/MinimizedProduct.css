@@ -51,9 +51,10 @@
 	top: 0.25rem;
 	right: 0.25rem;
 	border-radius: 9999px;
-	width: 1rem;
-	height: 1rem;
-	background-color: #a5dee6;
+	width: 1.5rem;
+	height: 1.5rem;
+	color: #fff;
+	background-color: #000;
 }
 
 .minimized-product-second-container h4 {

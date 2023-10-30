@@ -14,3 +14,10 @@
 	position: fixed;
 	height: 90%;
 }
+
+@media (max-width: 800px) {
+	.itembag-section {
+		width: 95vw;
+		height: 90vh;
+	}
+}

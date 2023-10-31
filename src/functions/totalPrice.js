@@ -1,7 +1,8 @@
 export const totalPrice = (products) => {
 	let sum = 0;
-	products.forEach((product) => {
+	products?.forEach((product) => {
 		sum += product.price;
 	});
-	return sum;
+	let decimalesLimitados = sum.toFixed(2);
+	return decimalesLimitados;
 };

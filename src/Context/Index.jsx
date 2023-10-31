@@ -10,10 +10,8 @@ function ShopContextProvider({ children }) {
 	const [cartNumber, setCartNumber] = useState(0);
 
 	function plusCartOne(productData) {
-		let newCartNumber = cartNumber + 1;
-		setCartNumber(newCartNumber);
+		setCartNumber(cartProducts.length);
 		setCartProducts([...cartProducts, productData]);
-		console.log("Cart:", cartProducts);
 	}
 
 	// show maximized detail logic
@@ -24,6 +22,9 @@ function ShopContextProvider({ children }) {
 
 	/// detail product info logic
 	const [productInfo, setProductInfo] = useState({});
+
+	// Order logic
+	const [order, setOrder] = useState([]);
 
 	return (
 		<shopContext.Provider
@@ -38,6 +39,8 @@ function ShopContextProvider({ children }) {
 				cartProducts,
 				setCartProducts,
 				setShowMaximized,
+				setOrder,
+				order,
 			}}>
 			{children}
 		</shopContext.Provider>

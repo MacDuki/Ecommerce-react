@@ -1,3 +1,5 @@
 body {
 	background-color: #ebe6ea;
+	margin: 0;
+	box-sizing: border-box;
 }

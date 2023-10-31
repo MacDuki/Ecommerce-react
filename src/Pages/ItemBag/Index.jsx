@@ -33,17 +33,16 @@ function ItemBag() {
 						<MinimizedProductBag key={product.id} product={product} />
 					))}
 				</div>
-				<footer className='footer-total-price'>
-					<p>
-						<span>Total:</span>
-						<span>{totalPrice(realCartProducts)}$</span>
-					</p>
-					<button
-						onClick={() => {
-							handleCheckout();
-						}}>
-						Checkout
-					</button>
+				<div className='span-container'>
+					<span>Total:</span>
+					<span>{totalPrice(realCartProducts)}$</span>
+				</div>
+				<footer
+					onClick={() => {
+						handleCheckout();
+					}}
+					className='footer-total-price'>
+					<button className='button-checkout'>Checkout</button>
 				</footer>
 			</section>
 		</>

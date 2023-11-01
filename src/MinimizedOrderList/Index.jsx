@@ -1,4 +1,5 @@
 import React from "react";
+import { AiFillCloseCircle } from "react-icons/ai";
 import { shopContext } from "../Context/Index";
 import { MinimizedProductBag } from "../MinimizedProductBag/Index";
 import "./MinimizedOrderList.css";
@@ -17,9 +18,11 @@ function MinimizedOrderList() {
 			setSelectedOrder(orderSelected);
 		}
 	}
-
+	function handleCloseSelected() {
+		setSelectedOrder(null);
+	}
 	return (
-		<div>
+		<>
 			{previousOrders?.map((previousOrder, key) => (
 				<div key={key} className={key}>
 					<p>{previousOrder.date}</p>
@@ -35,13 +38,14 @@ function MinimizedOrderList() {
 			))}
 
 			{selectedOrder && (
-				<div>
+				<aside>
+					<AiFillCloseCircle onClick={handleCloseSelected} />
 					{selectedOrder.products.map((product, index) => (
 						<MinimizedProductBag key={index} product={product} />
 					))}
-				</div>
+				</aside>
 			)}
-		</div>
+		</>
 	);
 }
 

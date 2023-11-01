@@ -1,6 +1,5 @@
 import React from "react";
 import { shopContext } from "../../Context/Index";
-import { MinimizedOrderList } from "../../MinimizedOrderList/Index";
 import { MinimizedProductBag } from "../../MinimizedProductBag/Index";
 import { totalPrice } from "../../functions/totalPrice";
 import "./ItemBag.css";
@@ -79,15 +78,6 @@ function ItemBag() {
 					</button>
 				</footer>
 			</aside>
-			<div className='myLastOrders-section-container'>
-				{previousOrders.length > 0 ? (
-					<MinimizedOrderList />
-				) : (
-					<p className='empty-historial'>
-						Aquí aparecerá tu historial de compras
-					</p>
-				)}
-			</div>
 		</section>
 	);
 }

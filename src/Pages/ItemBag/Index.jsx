@@ -8,8 +8,6 @@ import "./ItemBag.css";
 function ItemBag() {
 	const {
 		cartProducts,
-		order,
-		setOrder,
 		setCartProducts,
 		setCartNumber,
 		previousOrders,
@@ -41,43 +39,56 @@ function ItemBag() {
 		};
 		indexN++;
 		handlePreviousOrderList(orderToAdd);
-		setOrder([...order, orderToAdd]);
 		setCartProducts([{}]);
 		setCartNumber(0);
 	}
 
 	return (
-		<>
-			<section className='myorders-section-container'>
-				<div className='itembag-section-container'>
+		<section className='myorders-section-container'>
+			<aside className='itembag-section-container'>
+				<h2 className='cart-tittle'>Carrito de compras</h2>
+				{realCartProducts.length > 0 ? (
 					<div className='itembag-section'>
 						{realCartProducts?.map((product) => (
 							<MinimizedProductBag key={product.id} product={product} />
 						))}
 					</div>
-					<div className='span-container'>
-						<span>Total:</span>
-						<span>{totalPrice(realCartProducts)}$</span>
+				) : (
+					<div className='itembag-section'>
+						<p className='cart-empty'>
+							Debes seleccionar productos para poder hacer el checkout
+						</p>
 					</div>
-					<footer
+				)}
+
+				<div className='span-container'>
+					<span>Total:</span>
+					<span>{totalPrice(realCartProducts)}$</span>
+				</div>
+				<footer
+					onClick={() => {
+						realCartProducts.length > 0 ? handleCheckout() : null;
+					}}
+					className='footer-total-price'>
+					<button
 						onClick={() => {
-							handleCheckout();
+							realCartProducts.length > 0 ? handleCheckout() : null;
 						}}
-						className='footer-total-price'>
-						<button
-							onClick={() => {
-								handleCheckout();
-							}}
-							className='button-checkout'>
-							Checkout
-						</button>
-					</footer>
-				</div>
-				<div className='myLastOrders-section-container'>
+						className='button-checkout'>
+						Checkout
+					</button>
+				</footer>
+			</aside>
+			<div className='myLastOrders-section-container'>
+				{previousOrders.length > 0 ? (
 					<MinimizedOrderList />
-				</div>
-			</section>
-		</>
+				) : (
+					<p className='empty-historial'>
+						Aquí aparecerá tu historial de compras
+					</p>
+				)}
+			</div>
+		</section>
 	);
 }
 

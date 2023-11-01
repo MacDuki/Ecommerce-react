@@ -1,22 +1,9 @@
 .previous-section {
 	display: flex;
-	width: 100vw;
+	height: calc(100vh - 5rem);
 	align-items: center;
 	justify-content: space-evenly;
-}
-
-.list-container {
-	display: flex;
-	margin-left: 0;
-	padding-top: 1rem;
-	border-radius: 0.5rem;
-	background-color: #ffffff;
-	padding-left: 0.1rem;
-	padding-right: 0.1rem;
-	width: 40vw;
-	height: 90vh;
-	align-items: center;
-	justify-content: space-evenly;
+	position: relative;
 }
 
 .empty-historial {

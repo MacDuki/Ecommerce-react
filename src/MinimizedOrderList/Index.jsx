@@ -6,10 +6,10 @@ import "./MinimizedOrderList.css";
 function MinimizedOrderList() {
 	const { previousOrders } = React.useContext(shopContext);
 	const [selectedOrder, setSelectedOrder] = React.useState(null);
-
-	function showDetails(key) {
-		const orderSelected = previousOrders.find(
-			(previousOrder) => previousOrder.index === key
+	let orderSelected;
+	function showDetails(indexL) {
+		orderSelected = previousOrders.find(
+			(previousOrder) => previousOrder.index === indexL
 		);
 
 		if (!orderSelected) {
@@ -20,30 +20,35 @@ function MinimizedOrderList() {
 	}
 	function handleCloseSelected() {
 		setSelectedOrder(null);
+		orderSelected = undefined;
 	}
 	return (
 		<>
-			{previousOrders?.map((previousOrder, key) => (
-				<div key={key} className={key}>
-					<p>{previousOrder.date}</p>
-					<p>{previousOrder.totalProduct}</p>
-					<p>{previousOrder.totalPrice}</p>
-					<button
-						onClick={() => {
-							showDetails(key);
-						}}>
-						Detalles
-					</button>
-				</div>
-			))}
-
+			<div className='orders-list-container'>
+				{previousOrders?.map((previousOrder, key) => (
+					<div key={key} className='order-info-container'>
+						<p>{previousOrder.date}</p>
+						<p>{previousOrder.totalProduct}</p>
+						<p>{previousOrder.totalPrice}</p>
+						<button
+							onClick={() => {
+								showDetails(key);
+							}}>
+							Detalles
+						</button>
+					</div>
+				))}
+			</div>
 			{selectedOrder && (
-				<aside>
-					<AiFillCloseCircle onClick={handleCloseSelected} />
+				<div className='item-list-container'>
+					<AiFillCloseCircle
+						className='close-button'
+						onClick={handleCloseSelected}
+					/>
 					{selectedOrder.products.map((product, index) => (
 						<MinimizedProductBag key={index} product={product} />
 					))}
-				</aside>
+				</div>
 			)}
 		</>
 	);

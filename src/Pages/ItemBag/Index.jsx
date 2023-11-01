@@ -28,15 +28,15 @@ function ItemBag() {
 		const año = fechaActual.getFullYear();
 		const mes = fechaActual.getMonth();
 		const dia = fechaActual.getDate();
-		let indexN = 0; // Declarar 'indexN' antes del mapeo
+		// Declarar 'indexN' antes del mapeo
+
 		const orderToAdd = {
 			date: `Compra realizada el: ${dia}-${mes + 1}-${año}`,
 			products: realCartProducts,
 			totalProduct: realCartProducts.length,
 			totalPrice: totalPrice(realCartProducts),
-			index: indexN++,
+			index: previousOrders.length,
 		};
-		indexN++;
 		handlePreviousOrderList(orderToAdd);
 		setCartProducts([{}]);
 		setCartNumber(0);

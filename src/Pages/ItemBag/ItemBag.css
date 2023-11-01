@@ -1,3 +1,8 @@
+.myorders-section-container {
+	display: flex;
+	align-items: center;
+}
+
 .itembag-section-container {
 	display: flex;
 	flex-direction: column;
@@ -40,6 +45,7 @@
 	background-color: black;
 	border: none;
 	color: #ffffff;
+	cursor: pointer;
 }
 
 .span-container {

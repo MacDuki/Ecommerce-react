@@ -25,7 +25,7 @@ function ShopContextProvider({ children }) {
 
 	// Order logic
 	const [order, setOrder] = useState([]);
-
+	const [previousOrders, setPreviousOrders] = useState([]);
 	return (
 		<shopContext.Provider
 			value={{
@@ -41,6 +41,8 @@ function ShopContextProvider({ children }) {
 				setShowMaximized,
 				setOrder,
 				order,
+				previousOrders,
+				setPreviousOrders,
 			}}>
 			{children}
 		</shopContext.Provider>

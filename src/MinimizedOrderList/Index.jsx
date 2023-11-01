@@ -1,20 +1,20 @@
 import React from "react";
 import { shopContext } from "../Context/Index";
+import { MinimizedProductBag } from "../MinimizedProductBag/Index";
 import "./MinimizedOrderList.css";
 function MinimizedOrderList() {
 	const { previousOrders } = React.useContext(shopContext);
+	const [selectedOrder, setSelectedOrder] = React.useState(null);
 
 	function showDetails(key) {
-		console.log("Llamada a showDetails con key:", key);
 		const orderSelected = previousOrders.find(
 			(previousOrder) => previousOrder.index === key
 		);
 
-		if (orderSelected) {
-			console.log("Objeto encontrado:", orderSelected);
-			orderSelected.products.forEach((product) => {
-				console.log("Título del producto:", product.title);
-			});
+		if (!orderSelected) {
+			setSelectedOrder(null);
+		} else {
+			setSelectedOrder(orderSelected);
 		}
 	}
 
@@ -33,6 +33,14 @@ function MinimizedOrderList() {
 					</button>
 				</div>
 			))}
+
+			{selectedOrder && (
+				<div>
+					{selectedOrder.products.map((product, index) => (
+						<MinimizedProductBag key={index} product={product} />
+					))}
+				</div>
+			)}
 		</div>
 	);
 }

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const shopContext = createContext();
 
@@ -23,8 +23,16 @@ function ShopContextProvider({ children }) {
 	/// detail product info logic
 	const [productInfo, setProductInfo] = useState({});
 
-	// Order logic
+	// PreviousOrder logic
 	const [previousOrders, setPreviousOrders] = useState([]);
+	//// products logic
+	const [products, setProducts] = useState(null);
+	useEffect(() => {
+		fetch("https://fakestoreapi.com/products").then((response) =>
+			response.json().then((data) => setProducts(data))
+		);
+	}, []);
+
 	return (
 		<shopContext.Provider
 			value={{
@@ -40,6 +48,7 @@ function ShopContextProvider({ children }) {
 				setShowMaximized,
 				previousOrders,
 				setPreviousOrders,
+				products,
 			}}>
 			{children}
 		</shopContext.Provider>

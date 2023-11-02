@@ -25,7 +25,7 @@ function Home() {
 			setProductsByTitle(productsFilteredByTitle(products, searchProducts));
 	}, [products, searchProducts]);
 
-	const renderProducts = () => {
+	const renderProductsHome = () => {
 		if (searchProducts?.length > 0) {
 			if (productsByTitle?.length > 0) {
 				return (
@@ -69,7 +69,7 @@ function Home() {
 	return (
 		<Layout>
 			<Search />
-			{renderProducts()}
+			{renderProductsHome()}
 		</Layout>
 	);
 }

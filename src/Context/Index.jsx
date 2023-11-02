@@ -36,6 +36,11 @@ function ShopContextProvider({ children }) {
 		);
 	}, []);
 
+	///Category Logic
+
+	const [category, setCategory] = useState();
+	const [productsByCategory, setProductsByCategory] = useState();
+
 	return (
 		<shopContext.Provider
 			value={{
@@ -56,6 +61,10 @@ function ShopContextProvider({ children }) {
 				setSearchProducts,
 				productsByTitle,
 				setProductsByTitle,
+				category,
+				setCategory,
+				productsByCategory,
+				setProductsByCategory,
 			}}>
 			{children}
 		</shopContext.Provider>

@@ -9,7 +9,7 @@ function NavBar() {
 	const activeStyle = "underline";
 	const [width, setWidth] = useState(window.innerWidth);
 	const showToggleNav = width <= 768;
-	const { cartNumber } = React.useContext(shopContext);
+	const { cartNumber, setCategory } = React.useContext(shopContext);
 
 	return (
 		<nav className='navbar'>
@@ -26,17 +26,23 @@ function NavBar() {
 				</li>
 				{showToggleNav ? null : (
 					<>
-						<li>
-							<NavLink to='/'>Category 1</NavLink>
+						<li
+							onClick={() => {
+								setCategory("clothing");
+							}}>
+							<NavLink to='/clothing'>Clothing</NavLink>
 						</li>
-						<li>
-							<NavLink to='/'>Category 2</NavLink>
+						<li
+							onClick={() => {
+								setCategory("jewelery");
+							}}>
+							<NavLink to='/jewelery'>Jewelery</NavLink>
 						</li>
-						<li>
-							<NavLink to='/'>Category 3</NavLink>
-						</li>
-						<li>
-							<NavLink to='/'>Category 4</NavLink>
+						<li
+							onClick={() => {
+								setCategory("electronics");
+							}}>
+							<NavLink to='/electronics'>Electronics</NavLink>
 						</li>
 					</>
 				)}

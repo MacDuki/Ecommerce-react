@@ -1,11 +1,18 @@
 .layout {
-	margin-top: 1rem;
+	margin-top: 1.2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	flex-wrap: wrap;
-	align-content: flex-start;
 	margin-left: 1rem;
+}
+
+.layout.inactive {
+	align-content: center;
+}
+
+.layout.active {
+	align-content: flex-start;
 }
 
 @media (max-width: 800px) {

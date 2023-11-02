@@ -1,6 +1,7 @@
 .myorders-section-container {
 	display: flex;
 	max-width: 20rem;
+	max-height: 83%;
 	flex-direction: row;
 	gap: 2rem;
 	align-items: center;
@@ -9,7 +10,7 @@
 	z-index: 100;
 	right: 2%;
 	top: 6.3rem;
-	bottom: -1rem;
+	bottom: 0rem;
 }
 .cart-tittle {
 	text-align: center;
@@ -21,6 +22,7 @@
 	height: 1.5rem;
 	right: 0.3rem;
 	cursor: pointer;
+	z-index: 200;
 }
 .cart-empty {
 	margin-top: 10rem;
@@ -90,11 +92,22 @@
 }
 
 @media (max-width: 800px) {
-	.itembag-section-container {
-		width: 100%;
-		padding-left: 0;
-		padding-right: 0;
+	.myorders-section-container {
+		position: absolute;
+		top: 3rem;
+		left: 0;
+		max-width: 100%;
+		max-height: 90%;
 	}
+
+	.itembag-section-container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
 	.itembag-section {
 		max-width: 100%;
 		width: 100%;

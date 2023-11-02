@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { BsBag, BsListCheck, BsShop } from "react-icons/bs";
 import { VscAccount } from "react-icons/vsc";
 import { NavLink } from "react-router-dom";
@@ -6,11 +6,14 @@ import { shopContext } from "../Context/Index";
 import "./NavBar.css";
 
 function NavBar() {
-	const activeStyle = "underline";
-	const [width, setWidth] = useState(window.innerWidth);
-	const showToggleNav = width <= 768;
-	const { cartNumber, setCategory, showItemBag, setShowItemBag } =
-		React.useContext(shopContext);
+	const {
+		cartNumber,
+		setCategory,
+		showItemBag,
+		setShowItemBag,
+		mobileWidth,
+		layout,
+	} = React.useContext(shopContext);
 
 	return (
 		<nav className='navbar'>
@@ -19,13 +22,9 @@ function NavBar() {
 					<NavLink to='/'>{BsShop}</NavLink>
 				</li>
 				<li>
-					<NavLink
-						to='/'
-						className={({ isActive }) => (isActive ? activeStyle : undefined)}>
-						Home
-					</NavLink>
+					<NavLink to='/'>Home</NavLink>
 				</li>
-				{showToggleNav ? null : (
+				{mobileWidth ? null : (
 					<>
 						<li
 							onClick={() => {
@@ -55,14 +54,11 @@ function NavBar() {
 				<li>
 					<NavLink to='/MyOrders'>{BsListCheck}</NavLink>
 				</li>
-				<li>
-					<NavLink
-						to='/ItemBag'
-						onClick={() => {
-							setShowItemBag(!showItemBag);
-						}}>
-						{BsBag}
-					</NavLink>
+				<li
+					onClick={() => {
+						setShowItemBag(!showItemBag);
+					}}>
+					<BsBag />
 				</li>
 			</ul>
 			<div className='cart-number'>{cartNumber}</div>

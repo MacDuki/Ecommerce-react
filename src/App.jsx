@@ -13,7 +13,6 @@ function App() {
 			{ path: "/", element: <Home /> },
 			{ path: "/MyAccount", element: <MyAccount /> },
 			{ path: "/MyOrders", element: <MyOrders /> },
-			{ path: "/ItemBag", element: <Home /> },
 			{ path: "/clothing", element: <SelectedCategory /> },
 			{ path: "/jewelery", element: <SelectedCategory /> },
 			{ path: "/electronics", element: <SelectedCategory /> },

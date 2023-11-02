@@ -3,6 +3,7 @@ import { shopContext } from "../../Context/Index";
 import { Layout } from "../../Layout/Index";
 import { MaximizedProduct } from "../../MaximizedProduct/Index";
 import { MinimizedProduct } from "../../MinimizedProduct";
+import { ItemBag } from "../ItemBag/Index";
 
 function SelectedCategory() {
 	const {
@@ -24,17 +25,16 @@ function SelectedCategory() {
 
 	return (
 		<Layout>
-			<>
-				{showMaximized ? (
-					<MaximizedProduct />
-				) : (
-					<div className='home-container'>
-						{productsByCategory?.map((product) => (
-							<MinimizedProduct key={product.id} product={product} />
-						))}
-					</div>
-				)}
-			</>
+			<ItemBag />
+			{showMaximized ? (
+				<MaximizedProduct />
+			) : (
+				<div className='home-container'>
+					{productsByCategory?.map((product) => (
+						<MinimizedProduct key={product.id} product={product} />
+					))}
+				</div>
+			)}
 		</Layout>
 	);
 }

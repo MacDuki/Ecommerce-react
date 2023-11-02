@@ -19,7 +19,12 @@ function ShopContextProvider({ children }) {
 	function showMaximizedProduct() {
 		setShowMaximized(!showMaximized);
 	}
+	// Handle css class
+	const cssClassHomeLayout = showItemBag ? "active" : "inactive";
 
+	/// width
+	const [width, setWidth] = useState(window.innerWidth);
+	const mobileWidth = width <= 800;
 	/// detail product info logic
 	const [productInfo, setProductInfo] = useState({});
 	//// searchProdcts
@@ -67,6 +72,9 @@ function ShopContextProvider({ children }) {
 				setProductsByCategory,
 				showItemBag,
 				setShowItemBag,
+				width,
+				mobileWidth,
+				cssClassHomeLayout,
 			}}>
 			{children}
 		</shopContext.Provider>

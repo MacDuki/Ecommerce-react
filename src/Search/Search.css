@@ -1,0 +1,19 @@
+.input-search-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+	gap: 0.5rem;
+}
+
+.input-search {
+	border: solid 1px black;
+	width: 12rem;
+	height: 1.5rem;
+	border-radius: 0.4rem;
+}
+
+.input-search:focus {
+	outline: none;
+}

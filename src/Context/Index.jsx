@@ -22,11 +22,14 @@ function ShopContextProvider({ children }) {
 
 	/// detail product info logic
 	const [productInfo, setProductInfo] = useState({});
+	//// searchProdcts
+	const [searchProducts, setSearchProducts] = useState();
 
 	// PreviousOrder logic
 	const [previousOrders, setPreviousOrders] = useState([]);
 	//// products logic
 	const [products, setProducts] = useState(null);
+	const [productsByTitle, setProductsByTitle] = useState(null);
 	useEffect(() => {
 		fetch("https://fakestoreapi.com/products").then((response) =>
 			response.json().then((data) => setProducts(data))
@@ -49,6 +52,10 @@ function ShopContextProvider({ children }) {
 				previousOrders,
 				setPreviousOrders,
 				products,
+				searchProducts,
+				setSearchProducts,
+				productsByTitle,
+				setProductsByTitle,
 			}}>
 			{children}
 		</shopContext.Provider>

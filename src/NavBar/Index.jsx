@@ -9,7 +9,8 @@ function NavBar() {
 	const activeStyle = "underline";
 	const [width, setWidth] = useState(window.innerWidth);
 	const showToggleNav = width <= 768;
-	const { cartNumber, setCategory } = React.useContext(shopContext);
+	const { cartNumber, setCategory, showItemBag, setShowItemBag } =
+		React.useContext(shopContext);
 
 	return (
 		<nav className='navbar'>
@@ -55,7 +56,13 @@ function NavBar() {
 					<NavLink to='/MyOrders'>{BsListCheck}</NavLink>
 				</li>
 				<li>
-					<NavLink to='/ItemBag'>{BsBag}</NavLink>
+					<NavLink
+						to='/ItemBag'
+						onClick={() => {
+							setShowItemBag(!showItemBag);
+						}}>
+						{BsBag}
+					</NavLink>
 				</li>
 			</ul>
 			<div className='cart-number'>{cartNumber}</div>

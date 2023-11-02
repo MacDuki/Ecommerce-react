@@ -3,7 +3,6 @@ import "./App.css";
 import { ShopContextProvider } from "./Context/Index";
 import { NavBar } from "./NavBar/Index";
 import { Home } from "./Pages/Home/Index";
-import { ItemBag } from "./Pages/ItemBag/Index";
 import { MyAccount } from "./Pages/MyAccount/Index";
 import { MyOrders } from "./Pages/MyOrders/Index";
 import { NotFound } from "./Pages/NotFound/NotFound";
@@ -14,7 +13,7 @@ function App() {
 			{ path: "/", element: <Home /> },
 			{ path: "/MyAccount", element: <MyAccount /> },
 			{ path: "/MyOrders", element: <MyOrders /> },
-			{ path: "/ItemBag", element: <ItemBag /> },
+			{ path: "/ItemBag", element: <Home /> },
 			{ path: "/clothing", element: <SelectedCategory /> },
 			{ path: "/jewelery", element: <SelectedCategory /> },
 			{ path: "/electronics", element: <SelectedCategory /> },

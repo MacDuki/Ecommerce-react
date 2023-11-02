@@ -5,7 +5,7 @@ const shopContext = createContext();
 function ShopContextProvider({ children }) {
 	// Cart number logic
 	//// Shopping cart . add products to cart
-
+	const [showItemBag, setShowItemBag] = useState(false);
 	const [cartProducts, setCartProducts] = useState([{}]);
 	const [cartNumber, setCartNumber] = useState(0);
 
@@ -65,6 +65,8 @@ function ShopContextProvider({ children }) {
 				setCategory,
 				productsByCategory,
 				setProductsByCategory,
+				showItemBag,
+				setShowItemBag,
 			}}>
 			{children}
 		</shopContext.Provider>

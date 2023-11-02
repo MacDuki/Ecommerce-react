@@ -2,6 +2,15 @@
 	margin-top: 1rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	margin-left: 1rem;
+}
+
+@media (max-width: 800px) {
+	.layout {
+		margin-left: 0rem;
+		flex-wrap: nowrap;
+	}
 }

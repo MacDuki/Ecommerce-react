@@ -1,15 +1,27 @@
 .myorders-section-container {
 	display: flex;
-	width: 100%;
+	max-width: 20rem;
 	flex-direction: row;
 	gap: 2rem;
 	align-items: center;
 	justify-content: center;
+	position: fixed;
+	z-index: 100;
+	right: 2%;
+	top: 6.3rem;
+	bottom: -1rem;
 }
 .cart-tittle {
 	text-align: center;
 }
-
+.close-itembag-button {
+	position: absolute;
+	top: 1.2rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	right: 0.3rem;
+	cursor: pointer;
+}
 .cart-empty {
 	margin-top: 10rem;
 	text-align: center;
@@ -23,11 +35,17 @@
 	background-color: #ffffff;
 	padding-left: 0.1rem;
 	padding-right: 0.1rem;
-	width: 40vw;
-	height: 90vh;
+	width: 20rem;
+	height: 80vh;
 	align-items: center;
 }
-
+.productdata-container .name {
+	height: 1rem;
+	width: 5rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
 .itembag-section {
 	display: flex;
 	flex-direction: column;
@@ -40,7 +58,7 @@
 
 .footer-total-price {
 	position: relative;
-	width: 35vw;
+	width: 90%;
 	height: 2rem;
 	display: inline-flex;
 	align-items: flex-start;
@@ -68,6 +86,7 @@
 	margin-bottom: 1rem;
 	font-size: large;
 	font-weight: bold;
+	padding-top: 0.2rem;
 }
 
 @media (max-width: 800px) {

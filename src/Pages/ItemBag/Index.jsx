@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import { shopContext } from "../../Context/Index";
 import { MinimizedProductBag } from "../../MinimizedProductBag/Index";
 import { totalPrice } from "../../functions/totalPrice";
@@ -11,6 +12,8 @@ function ItemBag() {
 		setCartNumber,
 		previousOrders,
 		setPreviousOrders,
+		showItemBag,
+		setShowItemBag,
 	} = React.useContext(shopContext);
 
 	let realCartProducts;
@@ -42,9 +45,15 @@ function ItemBag() {
 		setCartNumber(0);
 	}
 
-	return (
-		<section className='myorders-section-container'>
-			<aside className='itembag-section-container'>
+	return showItemBag ? (
+		<aside className='myorders-section-container'>
+			<AiOutlineClose
+				onClick={() => {
+					setShowItemBag(!showItemBag);
+				}}
+				className='close-itembag-button'
+			/>
+			<section className='itembag-section-container'>
 				<h2 className='cart-tittle'>Carrito de compras</h2>
 				{realCartProducts.length > 0 ? (
 					<div className='itembag-section'>
@@ -77,9 +86,9 @@ function ItemBag() {
 						Checkout
 					</button>
 				</footer>
-			</aside>
-		</section>
-	);
+			</section>
+		</aside>
+	) : null;
 }
 
 export { ItemBag };

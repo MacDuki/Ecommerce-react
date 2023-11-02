@@ -4,7 +4,7 @@ import { Layout } from "../../Layout/Index";
 import { MaximizedProduct } from "../../MaximizedProduct/Index";
 import { MinimizedProduct } from "../../MinimizedProduct";
 
-function Jewelery() {
+function SelectedCategory() {
 	const {
 		category,
 		productsByCategory,
@@ -13,14 +13,14 @@ function Jewelery() {
 		products,
 	} = useContext(shopContext);
 
-	function categoryJawelery(products, category) {
+	function categoryFunction(products, category) {
 		return products?.filter((product) =>
 			product.category.toLowerCase().includes(category.toLowerCase())
 		);
 	}
 	useEffect(() => {
-		if (category) setProductsByCategory(categoryJawelery(products, category));
-	}, []);
+		if (category) setProductsByCategory(categoryFunction(products, category));
+	}, [category]);
 
 	return (
 		<Layout>
@@ -39,4 +39,4 @@ function Jewelery() {
 	);
 }
 
-export { Jewelery };
+export { SelectedCategory };

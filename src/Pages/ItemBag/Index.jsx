@@ -47,13 +47,15 @@ function ItemBag() {
 
 	return showItemBag ? (
 		<aside className='myorders-section-container'>
-			<AiOutlineClose
-				onClick={() => {
-					setShowItemBag(!showItemBag);
-				}}
-				className='close-itembag-button'
-			/>
 			<section className='itembag-section-container'>
+				<div className='close-itembag-button-container'>
+					<AiOutlineClose
+						onClick={() => {
+							setShowItemBag(!showItemBag);
+						}}
+						className='close-itembag-button'
+					/>
+				</div>
 				<h2 className='cart-tittle'>Carrito de compras</h2>
 				{realCartProducts.length > 0 ? (
 					<div className='itembag-section'>
@@ -68,7 +70,6 @@ function ItemBag() {
 						</p>
 					</div>
 				)}
-
 				<div className='span-container'>
 					<span>Total:</span>
 					<span>{totalPrice(realCartProducts)}$</span>

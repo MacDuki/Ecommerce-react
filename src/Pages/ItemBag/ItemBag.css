@@ -15,24 +15,34 @@
 .cart-tittle {
 	text-align: center;
 }
-.close-itembag-button {
-	position: absolute;
-	top: 1.2rem;
-	width: 1.5rem;
+
+.close-itembag-button-container {
+	position: relative;
+	display: block;
+	width: 100%;
 	height: 1.5rem;
 	right: 0.3rem;
 	cursor: pointer;
 	z-index: 200;
+	padding-top: 1rem;
+}
+.close-itembag-button {
+	position: absolute;
+	right: 0;
+	top: 0.4rem;
+	width: 1.5rem;
+	height: 1.5rem;
 }
 .cart-empty {
 	margin-top: 10rem;
 	text-align: center;
 }
 .itembag-section-container {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin-left: 0;
-	padding-top: 1rem;
+
 	border-radius: 0.5rem;
 	background-color: #ffffff;
 	padding-left: 0.1rem;

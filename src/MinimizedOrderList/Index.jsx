@@ -1,5 +1,6 @@
 import React from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { TbListDetails } from "react-icons/tb";
 import { shopContext } from "../Context/Index";
 import { MinimizedProductBag } from "../MinimizedProductBag/Index";
 import "./MinimizedOrderList.css";
@@ -24,21 +25,27 @@ function MinimizedOrderList() {
 	}
 	return (
 		<>
-			<div className='orders-list-container'>
+			<section className='orders-list-section'>
+				<h2>Información sobre las ultimas compras:</h2>
 				{previousOrders?.map((previousOrder, key) => (
-					<div key={key} className='order-info-container'>
-						<p>{previousOrder.date}</p>
-						<p>{previousOrder.totalProduct}</p>
-						<p>{previousOrder.totalPrice}</p>
-						<button
-							onClick={() => {
-								showDetails(key);
-							}}>
-							Detalles
-						</button>
+					<div key={key} className='order-list-container'>
+						<div className='order-info'>
+							<p>{previousOrder.date}</p>
+							<p>{"Cantidad de productos: " + previousOrder.totalProduct}</p>
+							<p>{"Costo total: " + previousOrder.totalPrice + "$"}</p>
+						</div>
+						<div>
+							<TbListDetails
+								className='show-details-button'
+								onClick={() => {
+									showDetails(key);
+								}}>
+								Detalles
+							</TbListDetails>
+						</div>
 					</div>
 				))}
-			</div>
+			</section>
 			{selectedOrder && (
 				<div className='item-list-container'>
 					<AiFillCloseCircle

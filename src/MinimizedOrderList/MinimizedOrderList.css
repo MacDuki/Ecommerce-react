@@ -1,7 +1,7 @@
-.orders-list-container {
+.orders-list-section {
 	background-color: #fff;
-	max-height: 90vh;
 	width: 40vw;
+	max-height: 50vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -9,21 +9,27 @@
 	border-radius: 0.5rem;
 	gap: 1rem;
 	margin-top: 1rem;
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+	padding-top: 10rem;
+	padding-bottom: 2rem;
+	overflow-y: scroll;
 }
-.order-info-container {
+.order-list-container {
 	border: 1px solid black;
 	border-radius: 0.5rem;
 	width: 90%;
-	height: 5rem;
+	padding: 0.5rem 0.3rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.order-info {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	align-items: start;
+	justify-content: flex-start;
 }
-
-.order-info-container p {
+.order-list-container p {
 	margin: 0;
 }
 
@@ -41,7 +47,11 @@
 	padding-top: 9rem;
 	position: relative;
 }
-
+.show-details-button {
+	cursor: pointer;
+	width: 1.8rem;
+	height: auto;
+}
 .close-button {
 	position: absolute;
 	top: 1rem;

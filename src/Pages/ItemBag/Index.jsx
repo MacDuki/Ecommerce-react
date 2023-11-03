@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { shopContext } from "../../Context/Index";
@@ -47,7 +48,11 @@ function ItemBag() {
 
 	return showItemBag ? (
 		<aside className='myorders-section-container'>
-			<section className='itembag-section-container'>
+			<motion.div
+				animate={{ scale: 1, y: 20 }}
+				initial={{ scale: 0.8, y: 100 }}
+				transition={{ type: "linear", bounce: 0.5, duration: 0.6 }}
+				className='itembag-section-container'>
 				<div className='close-itembag-button-container'>
 					<AiOutlineClose
 						onClick={() => {
@@ -87,7 +92,7 @@ function ItemBag() {
 						Checkout
 					</button>
 				</footer>
-			</section>
+			</motion.div>
 		</aside>
 	) : null;
 }

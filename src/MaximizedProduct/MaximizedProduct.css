@@ -1,3 +1,11 @@
+.section-maximized-product {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+
 .maximized-product {
 	width: 60vw;
 	height: 80vh;

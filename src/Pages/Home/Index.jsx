@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useEffect } from "react";
 import { shopContext } from "../../Context/Index";
 import { Layout } from "../../Layout/Index";
@@ -5,6 +6,7 @@ import { MaximizedProduct } from "../../MaximizedProduct/Index";
 import { MinimizedProduct } from "../../MinimizedProduct";
 import { Search } from "../../Search/index";
 import { ItemBag } from "../ItemBag/Index";
+
 import "./Home.css";
 
 function Home() {
@@ -34,7 +36,10 @@ function Home() {
 						{showMaximized ? (
 							<MaximizedProduct />
 						) : (
-							<section className='home-container'>
+							<section
+								layout
+								transition={{ duration: 1 }}
+								className='home-container'>
 								{productsByTitle?.map((product) => (
 									<MinimizedProduct key={product.id} product={product} />
 								))}
@@ -56,11 +61,14 @@ function Home() {
 					{showMaximized ? (
 						<MaximizedProduct />
 					) : (
-						<section className='home-container'>
+						<motion.section
+							layout
+							transition={{ duration: 0.8 }}
+							className='home-container'>
 							{products?.map((product) => (
 								<MinimizedProduct key={product.id} product={product} />
 							))}
-						</section>
+						</motion.section>
 					)}
 				</>
 			);

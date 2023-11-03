@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
 import { IoIosCloseCircleOutline } from "react-icons/io";
@@ -31,14 +32,18 @@ function MaximizedProduct() {
 	}
 
 	return showMaximized ? (
-		<>
+		<motion.section
+			initial={{ opacity: 0, scale: 0.5 }}
+			animate={{ opacity: 1, scale: 1 }}
+			transition={{ duration: 0.5, type: "linear" }}
+			className='section-maximized-product'>
 			<div className='close-button-container'>
 				<IoIosCloseCircleOutline
 					onClick={showMaximizedProduct}
 					id='close-button'
 				/>
 			</div>
-			<section className='maximized-product'>
+			<div className='maximized-product'>
 				<div className='img-container-maximized'>
 					<img className='' src={productInfo.image}></img>
 				</div>
@@ -47,8 +52,8 @@ function MaximizedProduct() {
 					<p className=''>{productInfo.price}$</p>
 				</div>
 				{isAdded(productInfo.id)}
-			</section>
-		</>
+			</div>
+		</motion.section>
 	) : null;
 }
 

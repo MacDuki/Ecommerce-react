@@ -1,6 +1,6 @@
 .input-search-container {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 1rem;
@@ -16,4 +16,10 @@
 
 .input-search:focus {
 	outline: none;
+}
+
+.search-button {
+	width: 1.5rem;
+	height: 1.5rem;
+	position: relative;
 }

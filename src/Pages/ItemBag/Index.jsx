@@ -51,7 +51,7 @@ function ItemBag() {
 			<motion.div
 				animate={{ scale: 1, y: 20 }}
 				initial={{ scale: 0.8, y: 100 }}
-				transition={{ type: "linear", bounce: 0.5, duration: 0.6 }}
+				transition={{ type: "linear", bounce: 0.5, duration: 0.4 }}
 				className='itembag-section-container'>
 				<div className='close-itembag-button-container'>
 					<AiOutlineClose

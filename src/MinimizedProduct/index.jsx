@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
 import { shopContext } from "../Context/Index";
@@ -34,7 +35,12 @@ function MinimizedProduct(product) {
 	}
 
 	return (
-		<div className='minimized-product-second-container'>
+		<motion.div
+			layout
+			animate={{ scale: 1, y: 0 }}
+			initial={{ scale: 0.8, y: -200 }}
+			transition={{ type: "linear", duration: 0.4 }}
+			className='minimized-product-second-container'>
 			{isAdded(product.product.id)}
 			<figure className=''>
 				<img
@@ -47,7 +53,7 @@ function MinimizedProduct(product) {
 				<h2 className=''> {product?.product.title}</h2>
 				<h3 className=''> {product?.product.price}$</h3>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

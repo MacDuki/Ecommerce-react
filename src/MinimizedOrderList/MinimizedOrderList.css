@@ -1,3 +1,7 @@
+.all-container {
+	display: flex;
+}
+
 .orders-list-container {
 	background-color: #fff;
 	width: 40rem;
@@ -48,7 +52,7 @@
 
 .item-list-container {
 	display: flex;
-	max-width: 40vw;
+	max-width: 25vw;
 	width: 40rem;
 	height: 20rem;
 	max-height: 60vh;
@@ -116,5 +120,5 @@
 }
 
 .productdata-container .name {
-	overflow: visible;
+	max-width: 8rem;
 }

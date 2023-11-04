@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { TbListDetails } from "react-icons/tb";
@@ -24,8 +25,11 @@ function MinimizedOrderList() {
 		orderSelected = undefined;
 	}
 	return (
-		<>
-			<section className='orders-list-container'>
+		<motion.section
+			transition={{ duration: 0.001 }}
+			layout
+			className='all-container'>
+			<aside className='orders-list-container'>
 				<h2>Información sobre las ultimas compras:</h2>
 				<div className='order-list-container'>
 					{previousOrders?.map((previousOrder, key) => (
@@ -47,9 +51,13 @@ function MinimizedOrderList() {
 						</div>
 					))}
 				</div>
-			</section>
+			</aside>
 			{selectedOrder && (
-				<aside className='item-list-container'>
+				<motion.aside
+					initial={{ opacity: 0, scale: 0.5, x: -200 }}
+					animate={{ opacity: 1, scale: 1, x: 20 }}
+					transition={{ duration: 0.5, type: "linear" }}
+					className='item-list-container'>
 					<div className='item-list-secondContainer'>
 						<AiOutlineClose
 							className='close-button'
@@ -61,9 +69,9 @@ function MinimizedOrderList() {
 							))}
 						</div>
 					</div>
-				</aside>
+				</motion.aside>
 			)}
-		</>
+		</motion.section>
 	);
 }
 

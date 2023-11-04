@@ -6,7 +6,7 @@ function MyOrders() {
 	const { previousOrders } = React.useContext(shopContext);
 
 	return (
-		<section className='previous-section'>
+		<>
 			{previousOrders.length > 0 ? (
 				<MinimizedOrderList />
 			) : (
@@ -14,7 +14,7 @@ function MyOrders() {
 					Aquí aparecerá tu historial de compras
 				</p>
 			)}
-		</section>
+		</>
 	);
 }
 

@@ -1,12 +1,3 @@
-.previous-section {
-	display: flex;
-	align-items: flex-start;
-	position: relative;
-	justify-content: center;
-	flex-direction: row;
-	gap: 5rem;
-}
-
 .empty-historial {
 	text-align: center;
 	margin-bottom: 29rem;

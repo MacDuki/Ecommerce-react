@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
-import { IoIosCloseCircleOutline } from "react-icons/io";
+import {
+	AiOutlineCheckCircle,
+	AiOutlineClose,
+	AiOutlinePlus,
+} from "react-icons/ai";
+
 import { shopContext } from "../Context/Index";
 import "./MaximizedProduct.css";
 
 function MaximizedProduct() {
 	const {
 		showMaximized,
-		showMaximizedProduct,
+		setShowMaximized,
 		productInfo,
 		plusCartOne,
 		cartProducts,
@@ -31,30 +35,37 @@ function MaximizedProduct() {
 		}
 	}
 
-	return showMaximized ? (
-		<motion.section
-			initial={{ opacity: 0, scale: 0.5 }}
-			animate={{ opacity: 1, scale: 1 }}
-			transition={{ duration: 0.5, type: "linear" }}
-			className='section-maximized-product'>
-			<div className='close-button-container'>
-				<IoIosCloseCircleOutline
-					onClick={showMaximizedProduct}
-					id='close-button'
-				/>
-			</div>
-			<div className='maximized-product'>
-				<div className='img-container-maximized'>
-					<img className='' src={productInfo.image}></img>
-				</div>
-				<div className='info-container-maximized'>
-					<h2 className=''>{productInfo.title}</h2>
-					<p className=''>{productInfo.price}$</p>
-				</div>
-				{isAdded(productInfo.id)}
-			</div>
-		</motion.section>
-	) : null;
+	return (
+		<>
+			{showMaximized && (
+				<motion.section
+					layout
+					initial={{ opacity: 0, scale: 0.5 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.5, type: "linear" }}
+					className='section-maximized-product'>
+					<div className='close-button-container'>
+						<AiOutlineClose
+							onClick={() => {
+								setShowMaximized(!showMaximized);
+							}}
+							id='close-button'
+						/>
+					</div>
+					<div className='maximized-product'>
+						<div className='img-container-maximized'>
+							<img className='' src={productInfo.image}></img>
+						</div>
+						<div className='info-container-maximized'>
+							<h2 className=''>{productInfo.title}</h2>
+							<p className=''>{productInfo.price}$</p>
+						</div>
+						{isAdded(productInfo.id)}
+					</div>
+				</motion.section>
+			)}
+		</>
+	);
 }
 
 export { MaximizedProduct };

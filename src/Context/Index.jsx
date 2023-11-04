@@ -16,9 +16,7 @@ function ShopContextProvider({ children }) {
 
 	// show maximized detail logic
 	const [showMaximized, setShowMaximized] = useState(false);
-	function showMaximizedProduct() {
-		setShowMaximized(!showMaximized);
-	}
+
 	// Handle css class
 	const cssClassHomeLayout = showItemBag ? "active" : "inactive";
 
@@ -52,8 +50,8 @@ function ShopContextProvider({ children }) {
 				plusCartOne,
 				cartNumber,
 				setCartNumber,
-				showMaximizedProduct,
 				showMaximized,
+				setShowMaximized,
 				productInfo,
 				setProductInfo,
 				cartProducts,

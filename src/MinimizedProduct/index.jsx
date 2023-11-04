@@ -4,10 +4,15 @@ import { shopContext } from "../Context/Index";
 import "./MinimizedProduct.css";
 
 function MinimizedProduct(product) {
-	const { plusCartOne, showMaximizedProduct, setProductInfo, cartProducts } =
-		React.useContext(shopContext);
+	const {
+		plusCartOne,
+		setShowMaximized,
+		showMaximized,
+		setProductInfo,
+		cartProducts,
+	} = React.useContext(shopContext);
 	function showProduct(productInfo) {
-		showMaximizedProduct();
+		setShowMaximized(!showMaximized);
 		setProductInfo(productInfo);
 	}
 

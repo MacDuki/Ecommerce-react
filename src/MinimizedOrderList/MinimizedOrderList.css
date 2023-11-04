@@ -1,6 +1,8 @@
-.orders-list-section {
+.orders-list-container {
 	background-color: #fff;
-	width: 40vw;
+	width: 40rem;
+	height: 20rem;
+	max-width: 50vw;
 	max-height: 50vh;
 	display: flex;
 	align-items: center;
@@ -8,12 +10,23 @@
 	flex-direction: column;
 	border-radius: 0.5rem;
 	gap: 1rem;
-	margin-top: 1rem;
-	padding-top: 10rem;
+	margin-top: 5rem;
+	padding-top: 1rem;
 	padding-bottom: 2rem;
-	overflow-y: scroll;
 }
+
 .order-list-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 90%;
+	width: 90%;
+	overflow: auto;
+	height: 20rem;
+	max-height: 50vh;
+}
+
+.order-list-item {
 	border: 1px solid black;
 	border-radius: 0.5rem;
 	width: 90%;
@@ -29,32 +42,79 @@
 	align-items: start;
 	justify-content: flex-start;
 }
-.order-list-container p {
+.order-list-item p {
 	margin: 0;
 }
 
 .item-list-container {
-	background-color: #fff;
-	max-height: 60vh;
-	width: 40vw;
 	display: flex;
-	align-items: center;
+	max-width: 40vw;
+	width: 40rem;
+	height: 20rem;
+	max-height: 60vh;
+
+	gap: 2rem;
 	justify-content: center;
-	flex-direction: column;
-	border-radius: 0.5rem;
-	overflow-y: scroll;
-	margin-top: 5rem;
-	padding-top: 9rem;
 	position: relative;
+	margin-top: 5rem;
+	height: 50rem;
+}
+
+.item-list-secondContainer {
+	max-width: 40vw;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-left: 0;
+	border-radius: 0.5rem;
+	background-color: #ffffff;
+	padding-left: 0.1rem;
+	padding-right: 0.1rem;
+	width: 40rem;
+	height: 20rem;
+	max-height: 60vh;
+	align-items: center;
+	padding-bottom: 2rem;
+	padding-top: 1rem;
+}
+
+.item-list-thirdContainer {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	height: 20rem;
+	max-height: 60vh;
+	align-items: center;
+	position: relative;
+	overflow-y: auto;
 }
 .show-details-button {
 	cursor: pointer;
 	width: 1.8rem;
 	height: auto;
 }
+
 .close-button {
 	position: absolute;
-	top: 1rem;
-	width: 2rem;
-	height: 2rem;
+	top: 0.2rem;
+	left: 0.1rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	cursor: pointer;
+}
+
+.icon-container {
+	display: none;
+}
+
+.product-container {
+	margin-top: 1rem;
+}
+
+.productdata-container {
+	overflow: hidden;
+}
+
+.productdata-container .name {
+	overflow: visible;
 }

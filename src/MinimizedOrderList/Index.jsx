@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillCloseCircle } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { TbListDetails } from "react-icons/tb";
 import { shopContext } from "../Context/Index";
 import { MinimizedProductBag } from "../MinimizedProductBag/Index";
@@ -25,37 +25,43 @@ function MinimizedOrderList() {
 	}
 	return (
 		<>
-			<section className='orders-list-section'>
+			<section className='orders-list-container'>
 				<h2>Información sobre las ultimas compras:</h2>
-				{previousOrders?.map((previousOrder, key) => (
-					<div key={key} className='order-list-container'>
-						<div className='order-info'>
-							<p>{previousOrder.date}</p>
-							<p>{"Cantidad de productos: " + previousOrder.totalProduct}</p>
-							<p>{"Costo total: " + previousOrder.totalPrice + "$"}</p>
+				<div className='order-list-container'>
+					{previousOrders?.map((previousOrder, key) => (
+						<div key={key} className='order-list-item'>
+							<div className='order-info'>
+								<p>{previousOrder.date}</p>
+								<p>{"Cantidad de productos: " + previousOrder.totalProduct}</p>
+								<p>{"Costo total: " + previousOrder.totalPrice + "$"}</p>
+							</div>
+							<div>
+								<TbListDetails
+									className='show-details-button'
+									onClick={() => {
+										showDetails(key);
+									}}>
+									Detalles
+								</TbListDetails>
+							</div>
 						</div>
-						<div>
-							<TbListDetails
-								className='show-details-button'
-								onClick={() => {
-									showDetails(key);
-								}}>
-								Detalles
-							</TbListDetails>
-						</div>
-					</div>
-				))}
-			</section>
-			{selectedOrder && (
-				<div className='item-list-container'>
-					<AiFillCloseCircle
-						className='close-button'
-						onClick={handleCloseSelected}
-					/>
-					{selectedOrder.products.map((product, index) => (
-						<MinimizedProductBag key={index} product={product} />
 					))}
 				</div>
+			</section>
+			{selectedOrder && (
+				<aside className='item-list-container'>
+					<div className='item-list-secondContainer'>
+						<AiOutlineClose
+							className='close-button'
+							onClick={handleCloseSelected}
+						/>
+						<div className='item-list-thirdContainer'>
+							{selectedOrder.products.map((product, index) => (
+								<MinimizedProductBag key={index} product={product} />
+							))}
+						</div>
+					</div>
+				</aside>
 			)}
 		</>
 	);

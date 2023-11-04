@@ -1,9 +1,10 @@
 .previous-section {
 	display: flex;
-	height: calc(100vh - 5rem);
-	align-items: center;
-	justify-content: space-evenly;
+	align-items: flex-start;
 	position: relative;
+	justify-content: center;
+	flex-direction: row;
+	gap: 5rem;
 }
 
 .empty-historial {

@@ -1,18 +1,23 @@
 function Home() {
 	return (
-		<section>
-			<article>
-				<img></img>
-			</article>
-		</section>
-		<footer>
-	<p></p>
-		</footer>
-
-
-
-	)
+		<>
+			<h1></h1>
+			<section>
+				<article>
+					<button />
+					<img></img>
+					<button />
+				</article>
+			</section>
+			<section>
+				<h2></h2>
+				<article></article>
+			</section>
+			<footer>
+				<p></p>
+			</footer>
+		</>
+	);
 }
 
 export { Home };
-

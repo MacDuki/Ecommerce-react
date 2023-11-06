@@ -45,6 +45,10 @@
 	height: 1.5rem;
 	background-color: #ffffff;
 	cursor: pointer;
+	transition: scale 0.3s;
+}
+.add-button:hover {
+	scale: 1.2;
 }
 .check-button {
 	position: absolute;
@@ -53,8 +57,6 @@
 	border-radius: 9999px;
 	width: 1.5rem;
 	height: 1.5rem;
-	color: #fff;
-	background-color: #000;
 }
 
 .minimized-product-second-container h4 {

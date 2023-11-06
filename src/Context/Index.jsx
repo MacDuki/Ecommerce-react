@@ -44,6 +44,8 @@ function ShopContextProvider({ children }) {
 	const [category, setCategory] = useState();
 	const [productsByCategory, setProductsByCategory] = useState();
 
+	/// stop gifAnimation
+
 	return (
 		<shopContext.Provider
 			value={{

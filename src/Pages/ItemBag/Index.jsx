@@ -73,6 +73,10 @@ function ItemBag() {
 						<p className='cart-empty'>
 							Debes seleccionar productos para poder hacer el checkout
 						</p>
+						<img
+							className='itembag-cart-image'
+							src='src\assets\empty_cart_image.png'
+						/>
 					</div>
 				)}
 				<div className='span-container'>

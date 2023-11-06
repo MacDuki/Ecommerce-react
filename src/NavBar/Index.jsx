@@ -22,7 +22,7 @@ function NavBar() {
 					<NavLink to='/'>{BsShop}</NavLink>
 				</li>
 				<li>
-					<NavLink to='/'>Home</NavLink>
+					<NavLink to='/SearchProducts'>Search</NavLink>
 				</li>
 				{mobileWidth ? null : (
 					<>

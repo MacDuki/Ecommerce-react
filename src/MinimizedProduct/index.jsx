@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import React from "react";
-import { AiOutlineCheckCircle, AiOutlinePlus } from "react-icons/ai";
+import React, { useState } from "react";
+import { AiOutlinePlus } from "react-icons/ai";
 import { shopContext } from "../Context/Index";
 import "./MinimizedProduct.css";
 
@@ -11,7 +11,13 @@ function MinimizedProduct(product) {
 		showMaximized,
 		setProductInfo,
 		cartProducts,
+		stopGifAnimation,
 	} = React.useContext(shopContext);
+
+	const [stopAnimationCheck, setStopAnimationCheck] = useState(
+		"src/assets/check_button_green.gif"
+	);
+
 	function showProduct(productInfo) {
 		setShowMaximized(!showMaximized);
 		setProductInfo(productInfo);
@@ -30,16 +36,20 @@ function MinimizedProduct(product) {
 				/>
 			);
 		} else {
-			return <AiOutlineCheckCircle className='check-button' />;
+			setTimeout(stopGifAnimation, 1000);
+			function stopGifAnimation() {
+				setStopAnimationCheck("src/assets/check_button_green_static.png");
+			}
+			return <img src={stopAnimationCheck} className='check-button' />;
 		}
 	}
 
 	return (
 		<motion.div
 			layout
-			animate={{ scale: 1, y: 0 }}
-			initial={{ scale: 0.8, y: -200 }}
-			transition={{ type: "linear", duration: 0.4 }}
+			animate={{ scale: 1 }}
+			initial={{ scale: 0.2 }}
+			transition={{ type: "linear", duration: 0.5 }}
 			className='minimized-product-second-container'>
 			{isAdded(product.product.id)}
 			<figure className=''>

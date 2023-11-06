@@ -21,7 +21,15 @@
 }
 
 .first-ul li {
-	padding-right: 0.5rem;
+	margin-right: 1.5rem;
+	transition: scale 0.3s;
+	border: 1px solid black;
+	border-radius: 0.5rem;
+	padding: 0.3rem 0.3rem;
+}
+
+.first-ul li:hover {
+	scale: 1.2;
 }
 
 .second-ul {

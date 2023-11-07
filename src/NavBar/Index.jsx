@@ -22,7 +22,7 @@ function NavBar() {
 					<NavLink to='/'>{BsShop}</NavLink>
 				</li>
 				<li>
-					<NavLink to='/SearchProducts'>Search</NavLink>
+					<NavLink to='/SearchProducts'>Buscar</NavLink>
 				</li>
 				{mobileWidth ? null : (
 					<>
@@ -30,19 +30,19 @@ function NavBar() {
 							onClick={() => {
 								setCategory("clothing");
 							}}>
-							<NavLink to='/clothing'>Clothing</NavLink>
+							<NavLink to='/clothing'>Ropa</NavLink>
 						</li>
 						<li
 							onClick={() => {
 								setCategory("jewelery");
 							}}>
-							<NavLink to='/jewelery'>Jewelery</NavLink>
+							<NavLink to='/jewelery'>Joyería</NavLink>
 						</li>
 						<li
 							onClick={() => {
 								setCategory("electronics");
 							}}>
-							<NavLink to='/electronics'>Electronics</NavLink>
+							<NavLink to='/electronics'>Electronica</NavLink>
 						</li>
 					</>
 				)}

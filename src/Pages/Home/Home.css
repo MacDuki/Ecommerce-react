@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
 
 .welcome-section {
-	width: 90%;
+	width: auto;
 	max-width: 90%;
-	height: 30rem;
-	max-height: 30rem;
+	height: 35rem;
+	max-height: 50rem;
 	overflow: hidden;
 	margin: 0 3rem;
 	padding: 1rem 0;
@@ -15,16 +15,6 @@
 	border-radius: 0.5rem;
 	flex-direction: column;
 }
-
-.welcome-section .img-container {
-	width: 60rem;
-	max-width: 60rem;
-	height: 25rem;
-	max-height: 25rem;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-}
-
 .welcome-section h1 {
 	margin: 0;
 	font-size: xx-large;
@@ -32,34 +22,84 @@
 	font-family: "Titan One", sans-serif;
 	position: relative;
 }
+.welcome-boxes-container {
+	width: 55rem;
+	max-width: 60rem;
+	height: auto;
+	max-height: 35rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 
-.welcome-section .img-container div {
+.electronic-box-container {
+	width: auto;
+	max-width: 50rem;
+	height: auto;
+	max-height: 25rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 80%;
-	max-width: 80%;
-	height: 80%;
-	max-height: 80%;
+	padding: 1rem 0;
+}
+.aElec {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.electronic-box-container img {
+	max-width: 40rem;
+	height: auto;
+	width: auto;
+	max-height: 15rem;
+	border-radius: 0.5rem;
+	object-fit: contain;
+}
+.two-boxes-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	max-width: 50rem;
+	height: auto;
+	max-height: 25rem;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: scale linear 0.5s;
-	padding: 1rem 1rem;
 }
 
-.welcome-section .img-container div:hover {
-	scale: 1.5;
+.two-boxes-container div {
+	padding: 0 1rem;
+}
+
+.aJew {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.aCloth {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.two-boxes-container img {
+	max-width: 20rem;
+	height: auto;
+	width: auto;
+	max-height: 15rem;
 	border-radius: 0.5rem;
-	z-index: 200;
+	object-fit: contain;
 }
 
-.welcome-section .img-container div img {
-	max-width: 80%;
-	height: 80%;
-	width: 80%;
-	border-radius: 0.5rem;
-	object-fit: cover;
-}
-
-.welcome-section .img-container div img:hover {
+.parrafo-category {
+	position: absolute;
+	background-color: black;
+	color: #f9f9f1;
+	font-size: large;
+	font-weight: 400;
+	font-family: "Titan One", sans-serif;
+	width: 25rem;
 }

@@ -1,21 +1,27 @@
+import { Layout } from "../../Layout/Index";
+import "./Home.css";
 function Home() {
 	return (
 		<>
-			<h1></h1>
-			<section>
-				<article>
-					<button />
-					<img></img>
-					<button />
-				</article>
-			</section>
-			<section>
-				<h2></h2>
-				<article></article>
-			</section>
-			<footer>
-				<p></p>
-			</footer>
+			<Layout>
+				<section className='welcome-section'>
+					<div>
+						<h1>Bienvenido a GARAGE SHOP </h1>
+						<article>
+							<img />
+							<img />
+							<img />
+						</article>
+					</div>
+				</section>
+				<section>
+					<h2></h2>
+					<article></article>
+				</section>
+				<footer>
+					<p></p>
+				</footer>
+			</Layout>
 		</>
 	);
 }

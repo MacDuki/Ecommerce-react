@@ -7,11 +7,17 @@ function Home() {
 				<section className='welcome-section'>
 					<div>
 						<h1>Bienvenido a GARAGE SHOP </h1>
-						<article>
-							<img />
-							<img />
-							<img />
-						</article>
+						<div className='img-container'>
+							<div>
+								<img src='src\assets\img\clothing-model.jpeg' />
+							</div>
+							<div>
+								<img src='src\assets\img\electronics-model.jpg' />
+							</div>
+							<div>
+								<img src='src\assets\img\jewelery-model.jpeg' />
+							</div>
+						</div>
 					</div>
 				</section>
 				<section>

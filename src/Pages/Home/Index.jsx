@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { shopContext } from "../../Context/Index";
 import { Layout } from "../../Layout/Index";
+import { ItemBag } from "../ItemBag/Index";
 import "./Home.css";
 function Home() {
 	const { setCategory } = React.useContext(shopContext);
@@ -17,6 +18,7 @@ function Home() {
 	return (
 		<>
 			<Layout>
+				<ItemBag />
 				<motion.section
 					layout
 					animate={{ scale: 1 }}

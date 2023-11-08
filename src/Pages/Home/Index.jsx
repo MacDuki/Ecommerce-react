@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { shopContext } from "../../Context/Index";
@@ -16,11 +17,21 @@ function Home() {
 	return (
 		<>
 			<Layout>
-				<section className='welcome-section'>
+				<motion.section
+					layout
+					animate={{ scale: 1 }}
+					initial={{ scale: 0.2 }}
+					transition={{ type: "linear", duration: 0.5 }}
+					className='welcome-section'>
 					<h1>Bienvenido a GARAGE SHOP </h1>
 					<div className='welcome-boxes-container'>
 						<NavLink className={"aElec"} to='/electronics'>
-							<div className='electronic-box-container'>
+							<motion.div
+								layout
+								animate={{ x: 0 }}
+								initial={{ x: -500 }}
+								transition={{ type: "linear", duration: 1 }}
+								className='electronic-box-container'>
 								<img
 									onClick={() => {
 										setCategory("electronics");
@@ -34,7 +45,10 @@ function Home() {
 									src='src\assets\img\electronics-model.jpg'
 								/>
 								{isHoveredE ? (
-									<div
+									<motion.div
+										animate={{ x: 0 }}
+										initial={{ x: -100 }}
+										transition={{ type: "linear", duration: 0.4 }}
 										onMouseEnter={() => {
 											setIsHoveredE(true);
 										}}
@@ -43,11 +57,16 @@ function Home() {
 										}}
 										className='container-parrafo-categoryE'>
 										{handleParrafoCategory("Electronica")}
-									</div>
+									</motion.div>
 								) : null}
-							</div>
+							</motion.div>
 						</NavLink>
-						<div className='two-boxes-container'>
+						<motion.div
+							layout
+							animate={{ x: 0 }}
+							initial={{ x: 500 }}
+							transition={{ type: "linear", duration: 1 }}
+							className='two-boxes-container'>
 							<NavLink className={"aCloth"} to='/clothing'>
 								<div>
 									<img
@@ -63,7 +82,10 @@ function Home() {
 										src='src\assets\img\clothing-model.jpeg'
 									/>
 									{isHoveredC ? (
-										<div
+										<motion.div
+											animate={{ y: 0 }}
+											initial={{ y: 20 }}
+											transition={{ type: "linear", duration: 0.4 }}
 											onMouseEnter={() => {
 												setIsHoveredC(true);
 											}}
@@ -72,7 +94,7 @@ function Home() {
 											}}
 											className='container-parrafo-category-twoBoxes'>
 											{handleParrafoCategory("Ropa")}
-										</div>
+										</motion.div>
 									) : null}
 								</div>
 							</NavLink>
@@ -91,7 +113,10 @@ function Home() {
 										src='src\assets\img\jewelery-model.jpeg'
 									/>
 									{isHoveredJ ? (
-										<div
+										<motion.div
+											animate={{ y: 0 }}
+											initial={{ y: 20 }}
+											transition={{ type: "linear", duration: 0.4 }}
 											onMouseEnter={() => {
 												setIsHoveredJ(true);
 											}}
@@ -100,13 +125,13 @@ function Home() {
 											}}
 											className='container-parrafo-category-twoBoxes'>
 											{handleParrafoCategory("Joyería")}
-										</div>
+										</motion.div>
 									) : null}
 								</div>
 							</NavLink>
-						</div>
+						</motion.div>
 					</div>
-				</section>
+				</motion.section>
 				<section>
 					<h2></h2>
 					<article></article>

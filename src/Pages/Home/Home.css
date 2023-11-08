@@ -47,6 +47,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 }
 
 .electronic-box-container img {
@@ -71,7 +72,7 @@
 }
 
 .two-boxes-container div {
-	padding: 0 1rem;
+	padding: 0 0.1rem;
 }
 
 .aJew {
@@ -94,12 +95,35 @@
 	object-fit: contain;
 }
 
-.parrafo-category {
+.container-parrafo-categoryE {
 	position: absolute;
-	background-color: black;
+	backdrop-filter: blur(10px);
+	border-radius: 0.5rem;
+	width: 28.5rem;
+	height: 5rem;
+	bottom: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.parrafo-category {
+	position: relative;
 	color: #f9f9f1;
 	font-size: large;
 	font-weight: 400;
 	font-family: "Titan One", sans-serif;
-	width: 25rem;
+	text-align: center;
+}
+
+.container-parrafo-category-twoBoxes {
+	position: absolute;
+	backdrop-filter: blur(10px);
+	border-radius: 0.5rem;
+	width: 14.8rem;
+	height: 3rem;
+	bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

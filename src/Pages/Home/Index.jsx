@@ -6,19 +6,11 @@ import "./Home.css";
 function Home() {
 	const { setCategory } = React.useContext(shopContext);
 	const [isHoveredE, setIsHoveredE] = useState(false);
-	let parrafoBox;
+	const [isHoveredJ, setIsHoveredJ] = useState(false);
+	const [isHoveredC, setIsHoveredC] = useState(false);
 
-	function handleHovered(Which) {
-		if (Which === "Electronica") {
-			parrafoBox = Which;
-			return;
-		} else if (Which === "Ropa") {
-			parrafoBox = Which;
-			return <p className='parrafo-category'>{parrafoBox}</p>;
-		} else {
-			parrafoBox = Which;
-			return <p className='parrafo-category'>{parrafoBox}</p>;
-		}
+	function handleParrafoCategory(category) {
+		return <p className='parrafo-category'>{category}</p>;
 	}
 
 	return (
@@ -42,7 +34,16 @@ function Home() {
 									src='src\assets\img\electronics-model.jpg'
 								/>
 								{isHoveredE ? (
-									<p className='parrafo-category'>Electronica</p>
+									<div
+										onMouseEnter={() => {
+											setIsHoveredE(true);
+										}}
+										onMouseLeave={() => {
+											setIsHoveredE(false);
+										}}
+										className='container-parrafo-categoryE'>
+										{handleParrafoCategory("Electronica")}
+									</div>
 								) : null}
 							</div>
 						</NavLink>
@@ -53,10 +54,26 @@ function Home() {
 										onClick={() => {
 											setCategory("clothing");
 										}}
-										onMouseEnter={() => {}}
-										onMouseLeave={() => {}}
+										onMouseEnter={() => {
+											setIsHoveredC(true);
+										}}
+										onMouseLeave={() => {
+											setIsHoveredC(false);
+										}}
 										src='src\assets\img\clothing-model.jpeg'
 									/>
+									{isHoveredC ? (
+										<div
+											onMouseEnter={() => {
+												setIsHoveredC(true);
+											}}
+											onMouseLeave={() => {
+												setIsHoveredC(false);
+											}}
+											className='container-parrafo-category-twoBoxes'>
+											{handleParrafoCategory("Ropa")}
+										</div>
+									) : null}
 								</div>
 							</NavLink>
 							<NavLink className={"aJew"} to='/jewelery'>
@@ -65,10 +82,26 @@ function Home() {
 										onClick={() => {
 											setCategory("jewelery");
 										}}
-										onMouseEnter={() => {}}
-										onMouseLeave={() => {}}
+										onMouseEnter={() => {
+											setIsHoveredJ(true);
+										}}
+										onMouseLeave={() => {
+											setIsHoveredJ(false);
+										}}
 										src='src\assets\img\jewelery-model.jpeg'
 									/>
+									{isHoveredJ ? (
+										<div
+											onMouseEnter={() => {
+												setIsHoveredJ(true);
+											}}
+											onMouseLeave={() => {
+												setIsHoveredJ(false);
+											}}
+											className='container-parrafo-category-twoBoxes'>
+											{handleParrafoCategory("Joyería")}
+										</div>
+									) : null}
 								</div>
 							</NavLink>
 						</div>

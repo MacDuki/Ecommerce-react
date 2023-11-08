@@ -1,0 +1,54 @@
+.quienesSomos-section {
+	max-width: 50rem;
+	min-height: 30rem;
+	width: auto;
+	height: auto;
+	background-color: #f9f9f1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-top: 2rem;
+	border-radius: 0.5rem;
+}
+
+.quienesSomos-section h2 {
+	margin: 0;
+	font-size: xx-large;
+	font-weight: 400;
+	font-family: "Titan One", sans-serif;
+	position: relative;
+}
+
+.quienes-info {
+	max-width: 40rem;
+}
+
+.quienes-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.linea-quienes {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.linea-quienes div {
+	background-color: white;
+	max-width: 15rem;
+	max-height: 15rem;
+	width: auto;
+	height: auto;
+}
+
+.linea-quienes img {
+	max-width: 5rem;
+	min-height: 5rem;
+	width: auto;
+	height: auto;
+}

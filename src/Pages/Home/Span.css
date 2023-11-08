@@ -1,0 +1,14 @@
+.middle-span-home {
+	margin-top: 5rem;
+	width: auto;
+	height: auto;
+	max-height: 15rem;
+}
+
+.middle-span-home img {
+	width: auto;
+	height: auto;
+	max-height: 15rem;
+	object-fit: contain;
+	border-radius: 0.5rem;
+}

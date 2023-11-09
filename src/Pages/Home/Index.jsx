@@ -158,8 +158,9 @@ function Home() {
 						<p>
 							Descubre nuestro exclusivo mercado en línea, donde cada artículo
 							cuenta una historia única. Aunque nuestro catálogo es selecto,
-							cada producto ha sido elegido con cuidado. Te invitamos a explorar
-							y encontrar tesoros inesperados en nuestro espacio virtual.
+							cada producto ha sido elegido con cuidado. <br /> Te invitamos a
+							explorar y encontrar tesoros inesperados en nuestro espacio
+							virtual.
 						</p>
 					</article>
 					<div className='quienes-container'>

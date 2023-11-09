@@ -6,7 +6,7 @@
 	justify-content: space-between;
 	align-items: center;
 	height: 2.75rem;
-	background-color: #7fa294;
+	background-color: #f9f9f1;
 	padding-left: 0;
 	max-height: 10vh;
 	position: relative;
@@ -23,7 +23,6 @@
 .first-ul li {
 	margin-right: 1.5rem;
 	transition: scale 0.3s;
-	border: 1px solid black;
 	border-radius: 0.5rem;
 	padding: 0.3rem 0.3rem;
 }

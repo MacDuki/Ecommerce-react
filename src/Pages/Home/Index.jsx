@@ -156,10 +156,10 @@ function Home() {
 					<h2>¿Quiénes Somos?</h2>
 					<article className='quienes-info'>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-							dolor deserunt, veniam iure alias cumque in laborum beatae, itaque
-							officia delectus doloremque consequuntur rem, ea perspiciatis sit
-							quos quae? Adipisci.
+							Descubre nuestro exclusivo mercado en línea, donde cada artículo
+							cuenta una historia única. Aunque nuestro catálogo es selecto,
+							cada producto ha sido elegido con cuidado. Te invitamos a explorar
+							y encontrar tesoros inesperados en nuestro espacio virtual.
 						</p>
 					</article>
 					<div className='quienes-container'>
@@ -167,20 +167,16 @@ function Home() {
 							<div>
 								<img loading='lazy' src='src\assets\carrito-de-compras.gif' />
 								<p>
-									Aunque somos un mercado pequeño, nuestra variedad de productos
-									es sorprendente. Desde artículos vintage hasta joyas únicas,
-									ofrecemos una amplia gama de tesoros que harán las delicias de
-									cualquier buscador de gangas. ¡Descubre algo especial en cada
-									esquina de nuestro garage virtual!
+									Aunque somos un mercado pequeño, nuestra selección es
+									sorprendentemente variada. Desde artículos electronicos hasta
+									joyas únicas. <br />
 								</p>
 							</div>
 							<div>
 								<img loading='lazy' src='src\assets\Globo.gif' />
 								<p>
-									Desde nuestro pequeño garage hasta tu puerta, llevamos
-									nuestros tesoros a cualquier parte del mundo. ¡Explora nuestra
-									selección única sin importar dónde te encuentres y lleva un
-									pedacito de nuestro garage a tu hogar!
+									Desde nuestro pequeño garage hasta tu hogar en cualquier
+									rincón del mundo.
 								</p>
 							</div>
 						</div>
@@ -188,20 +184,15 @@ function Home() {
 							<div>
 								<img loading='lazy' src='src\assets\devolucion-de-dinero.gif' />
 								<p>
-									Compra con confianza sabiendo que garantizamos la devolución
-									si tu producto llega con algún desperfecto. Tu satisfacción es
-									nuestra prioridad, y estamos comprometidos a hacer que tu
-									experiencia de compra sea perfecta.
+									Compra con confianza: devolución garantizada ante cualquier
+									desperfecto.
 								</p>
 							</div>
 							<div>
 								<img loading='lazy' src='src\assets\reloj.gif' />
 								<p>
-									Entendemos que no quieres esperar demasiado para disfrutar de
-									tu nuevo tesoro. Con tiempos de espera reducidos, nos
-									aseguramos de que recibas tu compra de garage de manera rápida
-									y eficiente. ¡Haz tu pedido hoy y pronto estarás disfrutando
-									de tu hallazgo!
+									Entendemos tu impaciencia. Con tiempos de espera minimizados,
+									aseguramos una entrega rápida y eficiente.
 								</p>
 							</div>
 						</div>

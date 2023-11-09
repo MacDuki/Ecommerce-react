@@ -57,15 +57,15 @@
 	flex-direction: column;
 	position: relative;
 	overflow: hidden;
+	padding: 1rem 1rem;
 }
 
 .linea-quienes div p {
 	max-width: 15em;
 	max-height: 8rem;
-	width: auto;
-	height: auto;
-	padding: 2rem 1rem;
-	font-size: smaller;
+	width: 14rem;
+	height: 7rem;
+	font-size: medium;
 	margin: 0;
 }
 
@@ -75,4 +75,5 @@
 	width: auto;
 	height: auto;
 	object-fit: contain;
+	margin-bottom: 0.5rem;
 }

@@ -53,7 +53,7 @@ function Home() {
 									<motion.div
 										animate={{ x: 0 }}
 										initial={{ x: -100 }}
-										transition={{ type: "linear", duration: 0.2 }}
+										transition={{ type: "linear", duration: 0.4 }}
 										onMouseEnter={() => {
 											setIsHoveredE(true);
 										}}
@@ -167,19 +167,20 @@ function Home() {
 							<div>
 								<img loading='lazy' src='src\assets\carrito-de-compras.gif' />
 								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-									ducimus totam impedit deleniti nesciunt voluptate, nisi quia
-									reiciendis? Libero facilis vel itaque dicta neque cumque
-									accusantium ratione iusto nihil dolore.
+									Aunque somos un mercado pequeño, nuestra variedad de productos
+									es sorprendente. Desde artículos vintage hasta joyas únicas,
+									ofrecemos una amplia gama de tesoros que harán las delicias de
+									cualquier buscador de gangas. ¡Descubre algo especial en cada
+									esquina de nuestro garage virtual!
 								</p>
 							</div>
 							<div>
 								<img loading='lazy' src='src\assets\Globo.gif' />
 								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-									ducimus totam impedit deleniti nesciunt voluptate, nisi quia
-									reiciendis? Libero facilis vel itaque dicta neque cumque
-									accusantium ratione iusto nihil dolore.
+									Desde nuestro pequeño garage hasta tu puerta, llevamos
+									nuestros tesoros a cualquier parte del mundo. ¡Explora nuestra
+									selección única sin importar dónde te encuentres y lleva un
+									pedacito de nuestro garage a tu hogar!
 								</p>
 							</div>
 						</div>
@@ -187,27 +188,25 @@ function Home() {
 							<div>
 								<img loading='lazy' src='src\assets\devolucion-de-dinero.gif' />
 								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-									ducimus totam impedit deleniti nesciunt voluptate, nisi quia
-									reiciendis? Libero facilis vel itaque dicta neque cumque
-									accusantium ratione iusto nihil dolore.
+									Compra con confianza sabiendo que garantizamos la devolución
+									si tu producto llega con algún desperfecto. Tu satisfacción es
+									nuestra prioridad, y estamos comprometidos a hacer que tu
+									experiencia de compra sea perfecta.
 								</p>
 							</div>
 							<div>
 								<img loading='lazy' src='src\assets\reloj.gif' />
 								<p>
-									Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel
-									ducimus totam impedit deleniti nesciunt voluptate, nisi quia
-									reiciendis? Libero facilis vel itaque dicta neque cumque
-									accusantium ratione iusto nihil dolore.
+									Entendemos que no quieres esperar demasiado para disfrutar de
+									tu nuevo tesoro. Con tiempos de espera reducidos, nos
+									aseguramos de que recibas tu compra de garage de manera rápida
+									y eficiente. ¡Haz tu pedido hoy y pronto estarás disfrutando
+									de tu hallazgo!
 								</p>
 							</div>
 						</div>
 					</div>
 				</motion.section>
-				<footer>
-					<p></p>
-				</footer>
 			</Layout>
 		</>
 	);

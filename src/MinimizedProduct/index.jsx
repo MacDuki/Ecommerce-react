@@ -54,6 +54,7 @@ function MinimizedProduct(product) {
 			{isAdded(product.product.id)}
 			<figure className=''>
 				<img
+					loading='lazy'
 					onClick={() => showProduct(product.product)}
 					className='product-img '
 					src={product?.product.image}></img>

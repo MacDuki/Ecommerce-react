@@ -54,7 +54,7 @@ function MaximizedProduct() {
 					</div>
 					<div className='maximized-product'>
 						<div className='img-container-maximized'>
-							<img className='' src={productInfo.image}></img>
+							<img loading='lazy' className='' src={productInfo.image}></img>
 						</div>
 						<div className='info-container-maximized'>
 							<h2 className=''>{productInfo.title}</h2>

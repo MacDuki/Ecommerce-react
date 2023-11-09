@@ -38,7 +38,7 @@ function MinimizedProductBag(product) {
 			</div>
 			<div className='img-container'>
 				<div className=''>
-					<img className='' src={product?.product.image}></img>
+					<img loading='lazy' className='' src={product?.product.image}></img>
 				</div>
 			</div>
 			<div className='productdata-container'>

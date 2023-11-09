@@ -66,10 +66,16 @@ function NavBar() {
 				)}
 			</ul>
 			<ul className='second-ul'>
-				<li>
+				<li
+					onClick={() => {
+						setPathActive("");
+					}}>
 					<NavLink to='/MyAccount'>{VscAccount}</NavLink>
 				</li>
-				<li>
+				<li
+					onClick={() => {
+						setPathActive("");
+					}}>
 					<NavLink to='/MyOrders'>{BsListCheck}</NavLink>
 				</li>
 				<li

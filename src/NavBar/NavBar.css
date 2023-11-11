@@ -76,15 +76,3 @@ a {
 	text-decoration-thickness: 3px;
 	text-underline-offset: 3px;
 }
-
-.footer {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	height: auto;
-	max-height: 3rem;
-	border: 1px solid black;
-	position: static;
-	bottom: 0;
-}

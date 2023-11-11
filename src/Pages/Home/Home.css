@@ -127,3 +127,22 @@
 	align-items: center;
 	justify-content: center;
 }
+
+@media (max-width: 800px) {
+	.welcome-section {
+		margin-top: 1rem;
+	}
+
+	.welcome-section h1 {
+		margin-bottom: 1rem;
+		padding-left: 1rem;
+	}
+
+	.electronic-box-container img {
+		max-width: 20rem;
+	}
+
+	.two-boxes-container img {
+		max-width: 10rem;
+	}
+}

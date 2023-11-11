@@ -12,3 +12,13 @@
 	object-fit: contain;
 	border-radius: 0.5rem;
 }
+
+@media (max-width: 800px) {
+	.middle-span-home {
+		display: none;
+	}
+
+	.middle-span-home img {
+		display: none;
+	}
+}

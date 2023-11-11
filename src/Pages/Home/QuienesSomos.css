@@ -3,7 +3,7 @@
 	min-height: 30rem;
 	width: 50rem;
 	height: auto;
-	background-color: #ffffff;
+	background-color: #fcfcfc;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -76,4 +76,22 @@
 	height: auto;
 	object-fit: contain;
 	margin-bottom: 0.5rem;
+}
+
+@media (max-width: 800px) {
+	.quienesSomos-section {
+		max-width: 23rem;
+	}
+	.quienes-info p {
+		max-width: 20rem;
+		width: auto;
+	}
+	.linea-quienes div {
+		max-width: 8rem;
+	}
+
+	.linea-quienes div p {
+		max-width: 8rem;
+		font-size: small;
+	}
 }

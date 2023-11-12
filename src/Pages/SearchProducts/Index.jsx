@@ -16,6 +16,7 @@ function SearchProducts() {
 		productsByTitle,
 		searchProducts,
 		setProductsByTitle,
+		showItemBag,
 	} = React.useContext(shopContext);
 
 	function productsFilteredByTitle(products, searchProdcts) {
@@ -29,58 +30,59 @@ function SearchProducts() {
 	}, [products, searchProducts]);
 
 	const renderProductsHome = () => {
-		if (searchProducts?.length > 0) {
-			if (productsByTitle?.length > 0) {
+		if (!showItemBag) {
+			if (searchProducts?.length > 0) {
+				if (productsByTitle?.length > 0) {
+					return (
+						<>
+							{showMaximized ? (
+								<MaximizedProduct />
+							) : (
+								<section
+									layout
+									transition={{ duration: 0.1 }}
+									className='home-container'>
+									{productsByTitle?.map((product) => (
+										<MinimizedProduct key={product.id} product={product} />
+									))}
+								</section>
+							)}
+						</>
+					);
+				} else {
+					return (
+						<p>
+							Lo sentimos, no encontramos ningún resultado relacionado a tu
+							busqueda.
+						</p>
+					);
+				}
+			} else {
 				return (
 					<>
 						{showMaximized ? (
 							<MaximizedProduct />
 						) : (
-							<section
+							<motion.section
 								layout
-								transition={{ duration: 0.1 }}
+								transition={{ duration: 0.8 }}
 								className='home-container'>
-								{productsByTitle?.map((product) => (
+								{products?.map((product) => (
 									<MinimizedProduct key={product.id} product={product} />
 								))}
-							</section>
+							</motion.section>
 						)}
 					</>
 				);
-			} else {
-				return (
-					<p>
-						Lo sentimos, no encontramos ningún resultado relacionado a tu
-						busqueda.
-					</p>
-				);
 			}
-		} else {
-			return (
-				<>
-					{showMaximized ? (
-						<MaximizedProduct />
-					) : (
-						<motion.section
-							layout
-							transition={{ duration: 0.8 }}
-							className='home-container'>
-							{products?.map((product) => (
-								<MinimizedProduct key={product.id} product={product} />
-							))}
-						</motion.section>
-					)}
-				</>
-			);
-		}
+		} else null;
 	};
 
 	return (
 		<>
 			<Layout>
 				<ItemBag />
-
-				{!showMaximized ? <Search /> : null}
+				{!showMaximized && !showItemBag ? <Search /> : null}
 				{renderProductsHome()}
 			</Layout>
 		</>

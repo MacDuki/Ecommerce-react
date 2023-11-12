@@ -12,6 +12,7 @@ function SelectedCategory() {
 		setProductsByCategory,
 		showMaximized,
 		products,
+		showItemBag,
 	} = useContext(shopContext);
 
 	function categoryFunction(products, category) {
@@ -23,18 +24,28 @@ function SelectedCategory() {
 		if (category) setProductsByCategory(categoryFunction(products, category));
 	}, [category]);
 
+	function renderSelectedCategory() {
+		if (!showItemBag) {
+			return (
+				<>
+					{showMaximized ? (
+						<MaximizedProduct />
+					) : (
+						<div className='home-container'>
+							{productsByCategory?.map((product) => (
+								<MinimizedProduct key={product.id} product={product} />
+							))}
+						</div>
+					)}
+				</>
+			);
+		}
+	}
+
 	return (
 		<Layout>
 			<ItemBag />
-			{showMaximized ? (
-				<MaximizedProduct />
-			) : (
-				<div className='home-container'>
-					{productsByCategory?.map((product) => (
-						<MinimizedProduct key={product.id} product={product} />
-					))}
-				</div>
-			)}
+			{renderSelectedCategory()}
 		</Layout>
 	);
 }

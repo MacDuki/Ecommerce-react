@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsBag, BsListCheck, BsShop } from "react-icons/bs";
@@ -23,7 +24,12 @@ function NavBar() {
 	function toggleMenu() {
 		if (showMenuMobile) {
 			return (
-				<div className='toggle-menu-container'>
+				<motion.div
+					layout
+					animate={{ scale: 1, y: 0 }}
+					initial={{ scale: 0.2, y: -100 }}
+					transition={{ type: "linear", duration: 0.3 }}
+					className='toggle-menu-container'>
 					<li
 						className={setStylePath("clothing")}
 						onClick={() => {
@@ -51,7 +57,7 @@ function NavBar() {
 						}}>
 						<NavLink to='/electronics'>Electronica</NavLink>
 					</li>
-				</div>
+				</motion.div>
 			);
 		} else null;
 	}

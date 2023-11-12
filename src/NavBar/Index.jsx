@@ -29,6 +29,7 @@ function NavBar() {
 						onClick={() => {
 							setCategory("clothing");
 							setPathActive("clothing");
+							setShowMenuMobile(false);
 						}}>
 						<NavLink to='/clothing'>Ropa</NavLink>
 					</li>
@@ -36,6 +37,7 @@ function NavBar() {
 						className={setStylePath("jewelery")}
 						onClick={() => {
 							setCategory("jewelery");
+							setShowMenuMobile(false);
 							setPathActive("jewelery");
 						}}>
 						<NavLink to='/jewelery'>Joyería</NavLink>
@@ -45,6 +47,7 @@ function NavBar() {
 						onClick={() => {
 							setCategory("electronics");
 							setPathActive("electronics");
+							setShowMenuMobile(false);
 						}}>
 						<NavLink to='/electronics'>Electronica</NavLink>
 					</li>
@@ -69,6 +72,7 @@ function NavBar() {
 					<li
 						onClick={() => {
 							setPathActive("");
+							setShowMenuMobile(false);
 						}}>
 						<NavLink to='/'>{BsShop}</NavLink>
 					</li>
@@ -76,6 +80,7 @@ function NavBar() {
 						className={setStylePath("Search")}
 						onClick={() => {
 							setPathActive("Search");
+							setShowMenuMobile(false);
 						}}>
 						<NavLink to='/SearchProducts'>Buscar</NavLink>
 					</li>
@@ -112,18 +117,21 @@ function NavBar() {
 					<li
 						onClick={() => {
 							setPathActive("");
+							setShowMenuMobile(false);
 						}}>
 						<NavLink to='/MyAccount'>{VscAccount}</NavLink>
 					</li>
 					<li
 						onClick={() => {
 							setPathActive("");
+							setShowMenuMobile(false);
 						}}>
 						<NavLink to='/MyOrders'>{BsListCheck}</NavLink>
 					</li>
 					<li
 						onClick={() => {
 							setShowItemBag(!showItemBag);
+							setShowMenuMobile(false);
 						}}>
 						<BsBag />
 					</li>

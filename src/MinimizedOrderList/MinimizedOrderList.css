@@ -122,6 +122,8 @@
 @media (max-width: 800px) {
 	.all-container {
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 	.orders-list-container {
 		max-width: 100vw;
@@ -140,9 +142,13 @@
 	.item-list-secondContainer {
 		max-width: 100vw;
 		width: auto;
+		padding: 1rem 2rem;
 	}
 	.item-list-thirdContainer {
 		max-width: 100vw;
 		width: auto;
+	}
+	.close-button {
+		position: relative;
 	}
 }

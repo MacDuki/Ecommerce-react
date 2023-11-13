@@ -13,6 +13,7 @@ function SelectedCategory() {
 		showMaximized,
 		products,
 		showItemBag,
+		mobileWidth,
 	} = useContext(shopContext);
 
 	function categoryFunction(products, category) {
@@ -25,7 +26,23 @@ function SelectedCategory() {
 	}, [category]);
 
 	function renderSelectedCategory() {
-		if (!showItemBag) {
+		if (mobileWidth) {
+			if (!showItemBag) {
+				return (
+					<>
+						{showMaximized ? (
+							<MaximizedProduct />
+						) : (
+							<div className='home-container'>
+								{productsByCategory?.map((product) => (
+									<MinimizedProduct key={product.id} product={product} />
+								))}
+							</div>
+						)}
+					</>
+				);
+			}
+		} else {
 			return (
 				<>
 					{showMaximized ? (

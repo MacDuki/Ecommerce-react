@@ -17,6 +17,7 @@ function SearchProducts() {
 		searchProducts,
 		setProductsByTitle,
 		showItemBag,
+		mobileWidth,
 	} = React.useContext(shopContext);
 
 	function productsFilteredByTitle(products, searchProdcts) {
@@ -30,7 +31,54 @@ function SearchProducts() {
 	}, [products, searchProducts]);
 
 	const renderProductsHome = () => {
-		if (!showItemBag) {
+		if (mobileWidth) {
+			if (!showItemBag) {
+				if (searchProducts?.length > 0) {
+					if (productsByTitle?.length > 0) {
+						return (
+							<>
+								{showMaximized ? (
+									<MaximizedProduct />
+								) : (
+									<section
+										layout
+										transition={{ duration: 0.1 }}
+										className='home-container'>
+										{productsByTitle?.map((product) => (
+											<MinimizedProduct key={product.id} product={product} />
+										))}
+									</section>
+								)}
+							</>
+						);
+					} else {
+						return (
+							<p>
+								Lo sentimos, no encontramos ningún resultado relacionado a tu
+								busqueda.
+							</p>
+						);
+					}
+				} else {
+					return (
+						<>
+							{showMaximized ? (
+								<MaximizedProduct />
+							) : (
+								<motion.section
+									layout
+									transition={{ duration: 0.8 }}
+									className='home-container'>
+									{products?.map((product) => (
+										<MinimizedProduct key={product.id} product={product} />
+									))}
+								</motion.section>
+							)}
+						</>
+					);
+				}
+			}
+		} else {
 			if (searchProducts?.length > 0) {
 				if (productsByTitle?.length > 0) {
 					return (
@@ -75,7 +123,7 @@ function SearchProducts() {
 					</>
 				);
 			}
-		} else null;
+		}
 	};
 
 	return (

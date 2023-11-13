@@ -1,5 +1,12 @@
+.empty-historial-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
 .empty-historial {
 	text-align: center;
-	margin-bottom: 29rem;
+	margin-bottom: 10rem;
 	font-weight: bold;
 }

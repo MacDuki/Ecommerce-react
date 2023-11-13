@@ -10,9 +10,12 @@ function MyOrders() {
 			{previousOrders.length > 0 ? (
 				<MinimizedOrderList />
 			) : (
-				<p className='empty-historial'>
-					Aquí aparecerá tu historial de compras
-				</p>
+				<div className='empty-historial-container'>
+					<p className='empty-historial'>
+						Aquí aparecerá tu historial de compras
+					</p>
+					<img src='src\assets\pablita-list-is-empty.png' />
+				</div>
 			)}
 		</>
 	);

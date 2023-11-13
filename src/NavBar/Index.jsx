@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { BsBag, BsListCheck, BsShop } from "react-icons/bs";
-import { VscAccount } from "react-icons/vsc";
 import { NavLink } from "react-router-dom";
 import { shopContext } from "../Context/Index";
 import "./NavBar.css";
@@ -36,6 +35,7 @@ function NavBar() {
 							setCategory("clothing");
 							setPathActive("clothing");
 							setShowMenuMobile(false);
+							setShowItemBag(false);
 						}}>
 						<NavLink to='/clothing'>Ropa</NavLink>
 					</li>
@@ -45,6 +45,7 @@ function NavBar() {
 							setCategory("jewelery");
 							setShowMenuMobile(false);
 							setPathActive("jewelery");
+							setShowItemBag(false);
 						}}>
 						<NavLink to='/jewelery'>Joyería</NavLink>
 					</li>
@@ -54,6 +55,7 @@ function NavBar() {
 							setCategory("electronics");
 							setPathActive("electronics");
 							setShowMenuMobile(false);
+							setShowItemBag(false);
 						}}>
 						<NavLink to='/electronics'>Electronica</NavLink>
 					</li>
@@ -68,17 +70,28 @@ function NavBar() {
 				<ul className='first-ul'>
 					{!mobileWidth ? null : (
 						<li>
-							<AiOutlineMenu
-								onClick={() => {
-									setShowMenuMobile(!showMenuMobile);
-								}}
-							/>
+							{showMenuMobile ? (
+								<AiOutlineClose
+									onClick={() => {
+										setShowMenuMobile(!showMenuMobile);
+										setShowItemBag(false);
+									}}
+								/>
+							) : (
+								<AiOutlineMenu
+									onClick={() => {
+										setShowMenuMobile(!showMenuMobile);
+										setShowItemBag(false);
+									}}
+								/>
+							)}
 						</li>
 					)}
 					<li
 						onClick={() => {
 							setPathActive("");
 							setShowMenuMobile(false);
+							setShowItemBag(false);
 						}}>
 						<NavLink to='/'>{BsShop}</NavLink>
 					</li>
@@ -87,6 +100,7 @@ function NavBar() {
 						onClick={() => {
 							setPathActive("Search");
 							setShowMenuMobile(false);
+							setShowItemBag(false);
 						}}>
 						<NavLink to='/SearchProducts'>Buscar</NavLink>
 					</li>
@@ -97,6 +111,7 @@ function NavBar() {
 								onClick={() => {
 									setCategory("clothing");
 									setPathActive("clothing");
+									setShowItemBag(false);
 								}}>
 								<NavLink to='/clothing'>Ropa</NavLink>
 							</li>
@@ -105,6 +120,7 @@ function NavBar() {
 								onClick={() => {
 									setCategory("jewelery");
 									setPathActive("jewelery");
+									setShowItemBag(false);
 								}}>
 								<NavLink to='/jewelery'>Joyería</NavLink>
 							</li>
@@ -113,6 +129,7 @@ function NavBar() {
 								onClick={() => {
 									setCategory("electronics");
 									setPathActive("electronics");
+									setShowItemBag(false);
 								}}>
 								<NavLink to='/electronics'>Electronica</NavLink>
 							</li>
@@ -124,13 +141,7 @@ function NavBar() {
 						onClick={() => {
 							setPathActive("");
 							setShowMenuMobile(false);
-						}}>
-						<NavLink to='/MyAccount'>{VscAccount}</NavLink>
-					</li>
-					<li
-						onClick={() => {
-							setPathActive("");
-							setShowMenuMobile(false);
+							setShowItemBag(false);
 						}}>
 						<NavLink to='/MyOrders'>{BsListCheck}</NavLink>
 					</li>

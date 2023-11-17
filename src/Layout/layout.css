@@ -5,6 +5,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 	margin-left: 1rem;
+	min-height: 100vh;
 }
 
 .layout.inactive {
@@ -22,11 +23,12 @@
 	justify-content: space-around;
 	height: auto;
 	max-height: 3rem;
-	background-color: #f9f9f1;
+	background-color: #272829;
 	margin-top: 1rem;
+	color: #ffff;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
 	.layout {
 		margin-left: 0rem;
 		flex-wrap: nowrap;

@@ -6,10 +6,11 @@
 	justify-content: space-between;
 	align-items: center;
 	height: 2.75rem;
-	background-color: #f9f9f1;
+	background-color: #272829;
 	padding-left: 0;
 	max-height: 10vh;
 	position: relative;
+	color: #ebe4e4;
 }
 
 .first-ul {
@@ -63,10 +64,11 @@
 	font-weight: 300;
 	right: 15px;
 	top: 5px;
+	color: #272829;
 }
 
 a {
-	color: black;
+	color: #ebe4e4;
 	text-decoration: none;
 }
 
@@ -90,6 +92,6 @@ a {
 .toggle-menu-container li {
 	padding: 0.5rem;
 	margin-bottom: 0.2rem;
-	background-color: #f9f9f1;
+	background-color: #272829;
 	border-radius: 0.5rem;
 }

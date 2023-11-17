@@ -111,7 +111,7 @@
 	height: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
 	.myorders-section-container {
 		position: absolute;
 		top: 3rem;
@@ -135,5 +135,9 @@
 	}
 	.footer-total-price {
 		width: 90%;
+	}
+	.itembag-cart-image {
+		width: 15rem;
+		margin-top: 8rem;
 	}
 }

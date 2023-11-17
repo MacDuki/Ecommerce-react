@@ -13,7 +13,7 @@
 	border-radius: 0.5rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
 	.middle-span-home {
 		display: none;
 	}

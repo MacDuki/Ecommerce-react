@@ -109,7 +109,7 @@
 
 .parrafo-category {
 	position: relative;
-	color: #f9f9f1;
+	color: #272829;
 	font-size: large;
 	font-weight: 400;
 	font-family: "Titan One", sans-serif;
@@ -128,7 +128,7 @@
 	justify-content: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1300px) {
 	.welcome-section {
 		margin-top: 1rem;
 	}

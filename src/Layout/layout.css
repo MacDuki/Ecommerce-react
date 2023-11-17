@@ -23,6 +23,7 @@
 	height: auto;
 	max-height: 3rem;
 	background-color: #f9f9f1;
+	margin-top: 1rem;
 }
 
 @media (max-width: 800px) {

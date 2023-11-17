@@ -3,7 +3,6 @@ import "./App.css";
 import { ShopContextProvider } from "./Context/Index";
 import { NavBar } from "./NavBar/Index";
 import { Home } from "./Pages/Home/Index";
-import { MyAccount } from "./Pages/MyAccount/Index";
 import { MyOrders } from "./Pages/MyOrders/Index";
 import { NotFound } from "./Pages/NotFound/NotFound";
 import { SearchProducts } from "./Pages/SearchProducts/Index";
@@ -13,7 +12,6 @@ function App() {
 		const routes = useRoutes([
 			{ path: "/SearchProducts", element: <SearchProducts /> },
 			{ path: "/", element: <Home /> },
-			{ path: "/MyAccount", element: <MyAccount /> },
 			{ path: "/MyOrders", element: <MyOrders /> },
 			{ path: "/clothing", element: <SelectedCategory /> },
 			{ path: "/jewelery", element: <SelectedCategory /> },

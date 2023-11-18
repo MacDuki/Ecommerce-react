@@ -22,7 +22,7 @@ function ShopContextProvider({ children }) {
 
 	/// width
 	const [width, setWidth] = useState(window.innerWidth);
-	const mobileWidth = width <= 800;
+	const mobileWidth = width <= 1000;
 	/// detail product info logic
 	const [productInfo, setProductInfo] = useState({});
 	//// searchProdcts

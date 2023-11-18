@@ -10,18 +10,34 @@ function Layout({ children }) {
 			if (!showItemBag) {
 				return (
 					<footer className='footer'>
-						<p className='info-p'>sdsddsdsddsdsds </p>
-						<p className='mention1-p'> dsdssdsddsd </p>
-						<p className='mention2-p'>dsdsd ssdsd</p>
+						<p className='info-p'>
+							<a
+								href='https://www.flaticon.es/iconos-animados-gratis/usuario'
+								title='usuario iconos animados'>
+								iconos animados- Flaticon
+							</a>
+						</p>
+						<p className='mention1-p'>
+							{" "}
+							icons by <a href='https://icons8.com/'>icons8.com</a>
+						</p>
 					</footer>
 				);
 			}
 		} else
 			return (
 				<footer className='footer'>
-					<p className='info-p'>sdsddsdsddsdsds </p>
-					<p className='mention1-p'> dsdssdsddsd </p>
-					<p className='mention2-p'>dsdsd ssdsd</p>
+					<p className='info-p'>
+						<a
+							href='https://www.flaticon.es/iconos-animados-gratis/usuario'
+							title='usuario iconos animados'>
+							iconos animados creados por Freepik - Flaticon
+						</a>
+					</p>
+					<p className='mention1-p'>
+						{" "}
+						icons by <a href='https://icons8.com/'>icons8.com</a>
+					</p>
 				</footer>
 			);
 	}

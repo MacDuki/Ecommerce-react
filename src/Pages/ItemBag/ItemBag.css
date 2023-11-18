@@ -111,7 +111,7 @@
 	height: auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1050px) {
 	.myorders-section-container {
 		position: absolute;
 		top: 3rem;

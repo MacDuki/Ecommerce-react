@@ -170,9 +170,8 @@ function Home() {
 								<div>
 									<img loading='lazy' src='src\assets\carrito-de-compras.gif' />
 									<p>
-										Aunque somos un mercado pequeño, nuestra selección es
-										sorprendentemente variada. Desde artículos electronicos
-										hasta joyas únicas. <br />
+										Aunque somos un mercado pequeño, encontraras artículos
+										electronicos, ropa y joyas. <br />
 									</p>
 								</div>
 								<div>
@@ -357,9 +356,8 @@ function Home() {
 								<div>
 									<img loading='lazy' src='src\assets\carrito-de-compras.gif' />
 									<p>
-										Aunque somos un mercado pequeño, nuestra selección es
-										sorprendentemente variada. Desde artículos electronicos
-										hasta joyas únicas. <br />
+										Aunque somos un mercado pequeño, encontraras artículos
+										electronicos, ropa y joyas. <br />
 									</p>
 								</div>
 								<div>

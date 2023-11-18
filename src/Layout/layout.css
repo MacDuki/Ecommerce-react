@@ -28,7 +28,7 @@
 	color: #ffff;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 800px) {
 	.layout {
 		margin-left: 0rem;
 		flex-wrap: nowrap;

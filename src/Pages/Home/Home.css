@@ -128,7 +128,7 @@
 	justify-content: center;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 800px) {
 	.welcome-section {
 		margin-top: 1rem;
 	}

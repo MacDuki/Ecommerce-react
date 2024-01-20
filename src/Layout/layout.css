@@ -32,6 +32,7 @@
 	.layout {
 		margin-left: 0rem;
 		flex-wrap: nowrap;
-		margin-bottom: 10rem;
+		margin-bottom: 5rem;
+		min-height: auto;
 	}
 }

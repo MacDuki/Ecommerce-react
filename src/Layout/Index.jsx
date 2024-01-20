@@ -43,7 +43,7 @@ function Layout({ children }) {
 	}
 	return (
 		<>
-			<main className={cssClassHomeLayout + " layout"}>{children}</main>
+			<main className={" layout"}>{children}</main>
 			{renderFooter()}
 		</>
 	);

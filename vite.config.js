@@ -7,5 +7,4 @@ export default defineConfig({
 	build: {
 		outDir: "build",
 	},
-	base: "https://macduki.github.io/Ecommerce-react",
 });

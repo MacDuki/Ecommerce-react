@@ -46,59 +46,61 @@ function ItemBag() {
 		setCartNumber(0);
 	}
 
-	return showItemBag ? (
-		<aside className='myorders-section-container'>
-			<motion.div
-				animate={{ scale: 1, y: 20 }}
-				initial={{ scale: 0.8, y: 100 }}
-				transition={{ type: "linear", bounce: 0.5, duration: 0.4 }}
-				className='itembag-section-container'>
-				<div className='close-itembag-button-container'>
-					<AiOutlineClose
-						onClick={() => {
-							setShowItemBag(!showItemBag);
-						}}
-						className='close-itembag-button'
-					/>
-				</div>
-				<h2 className='cart-tittle'>Carrito de compras</h2>
-				{realCartProducts.length > 0 ? (
-					<div className='itembag-section'>
-						{realCartProducts?.map((product) => (
-							<MinimizedProductBag key={product.id} product={product} />
-						))}
-					</div>
-				) : (
-					<div className='itembag-section'>
-						<p className='cart-empty'>
-							Debes seleccionar productos para poder hacer el checkout
-						</p>
-						<img
-							className='itembag-cart-image'
-							src='src\assets\empty_cart_image.png'
+	return (
+		showItemBag && (
+			<aside className='myorders-section-container'>
+				<motion.div
+					animate={{ scale: 1, y: 0 }}
+					initial={{ scale: 0.8, y: 100 }}
+					transition={{ type: "linear", bounce: 0.5, duration: 0.4 }}
+					className='itembag-section-container'>
+					<div className='close-itembag-button-container'>
+						<AiOutlineClose
+							onClick={() => {
+								setShowItemBag(!showItemBag);
+							}}
+							className='close-itembag-button'
 						/>
 					</div>
-				)}
-				<div className='span-container'>
-					<span>Total:</span>
-					<span>{totalPrice(realCartProducts)}$</span>
-				</div>
-				<footer
-					onClick={() => {
-						realCartProducts.length > 0 ? handleCheckout() : null;
-					}}
-					className='footer-total-price'>
-					<button
+					<h2 className='cart-tittle'>Carrito de compras</h2>
+					{realCartProducts.length > 0 ? (
+						<div className='itembag-section'>
+							{realCartProducts?.map((product) => (
+								<MinimizedProductBag key={product.id} product={product} />
+							))}
+						</div>
+					) : (
+						<div className='itembag-section'>
+							<p className='cart-empty'>
+								Debes seleccionar productos para poder hacer el checkout
+							</p>
+							<img
+								className='itembag-cart-image'
+								src='src\assets\empty_cart_image.png'
+							/>
+						</div>
+					)}
+					<div className='span-container'>
+						<span>Total:</span>
+						<span>{totalPrice(realCartProducts)}$</span>
+					</div>
+					<footer
 						onClick={() => {
 							realCartProducts.length > 0 ? handleCheckout() : null;
 						}}
-						className='button-checkout'>
-						Checkout
-					</button>
-				</footer>
-			</motion.div>
-		</aside>
-	) : null;
+						className='footer-total-price'>
+						<button
+							onClick={() => {
+								realCartProducts.length > 0 ? handleCheckout() : null;
+							}}
+							className='button-checkout'>
+							Checkout
+						</button>
+					</footer>
+				</motion.div>
+			</aside>
+		)
+	);
 }
 
 export { ItemBag };

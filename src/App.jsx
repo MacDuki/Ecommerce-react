@@ -3,6 +3,7 @@ import "./App.css";
 import { ShopContextProvider } from "./Context/Index";
 import { NavBar } from "./NavBar/Index";
 import { Home } from "./Pages/Home/Index";
+import { ItemBag } from "./Pages/ItemBag/Index";
 import { MyOrders } from "./Pages/MyOrders/Index";
 import { NotFound } from "./Pages/NotFound/NotFound";
 import { SearchProducts } from "./Pages/SearchProducts/Index";
@@ -26,6 +27,7 @@ function App() {
 			<ShopContextProvider>
 				<BrowserRouter>
 					<NavBar />
+					<ItemBag />
 					<RoutesFunction />
 				</BrowserRouter>
 			</ShopContextProvider>

@@ -51,7 +51,7 @@ function ItemBag() {
 			<aside className='myorders-section-container'>
 				<motion.div
 					animate={{ scale: 1, y: 0 }}
-					initial={{ scale: 0.8, y: 100 }}
+					initial={{ scale: 0.8, y: -500 }}
 					transition={{ type: "linear", bounce: 0.5, duration: 0.4 }}
 					className='itembag-section-container'>
 					<div className='close-itembag-button-container'>
@@ -86,12 +86,12 @@ function ItemBag() {
 					</div>
 					<footer
 						onClick={() => {
-							realCartProducts.length > 0 ? handleCheckout() : null;
+							realCartProducts.length > 0 && handleCheckout();
 						}}
 						className='footer-total-price'>
 						<button
 							onClick={() => {
-								realCartProducts.length > 0 ? handleCheckout() : null;
+								realCartProducts.length > 0 && handleCheckout();
 							}}
 							className='button-checkout'>
 							Checkout

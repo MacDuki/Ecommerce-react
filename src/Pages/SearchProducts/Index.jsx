@@ -5,7 +5,6 @@ import { Layout } from "../../Layout/Index";
 import { MaximizedProduct } from "../../MaximizedProduct/Index";
 import { MinimizedProduct } from "../../MinimizedProduct";
 import { Search } from "../../Search/index";
-import { ItemBag } from "../ItemBag/Index";
 
 import "./SearchProducts.css";
 
@@ -129,8 +128,7 @@ function SearchProducts() {
 	return (
 		<>
 			<Layout>
-				<ItemBag />
-				{!showMaximized && !showItemBag ? <Search /> : null}
+				{!showMaximized && !showItemBag && <Search />}
 				{renderProductsHome()}
 			</Layout>
 		</>

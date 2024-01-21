@@ -33,6 +33,6 @@
 		margin-left: 0rem;
 		flex-wrap: nowrap;
 		margin-bottom: 5rem;
-		min-height: auto;
+		min-height: screen;
 	}
 }

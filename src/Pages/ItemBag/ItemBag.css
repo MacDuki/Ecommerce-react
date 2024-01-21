@@ -65,7 +65,7 @@
 	height: 80%;
 	align-items: center;
 	position: relative;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .footer-total-price {

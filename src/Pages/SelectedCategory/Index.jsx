@@ -3,7 +3,6 @@ import { shopContext } from "../../Context/Index";
 import { Layout } from "../../Layout/Index";
 import { MaximizedProduct } from "../../MaximizedProduct/Index";
 import { MinimizedProduct } from "../../MinimizedProduct";
-import { ItemBag } from "../ItemBag/Index";
 
 function SelectedCategory() {
 	const {
@@ -59,12 +58,7 @@ function SelectedCategory() {
 		}
 	}
 
-	return (
-		<Layout>
-			<ItemBag />
-			{renderSelectedCategory()}
-		</Layout>
-	);
+	return <Layout>{renderSelectedCategory()}</Layout>;
 }
 
 export { SelectedCategory };

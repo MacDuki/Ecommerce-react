@@ -34,7 +34,7 @@ function HomeDeskV() {
 							/>
 
 							<div className='container-parrafo-categoryE'>
-								<p className='parrafo-category'>Electronica</p>;
+								<p className='parrafo-category'>Electronica</p>
 							</div>
 						</motion.div>
 					</NavLink>
@@ -55,7 +55,7 @@ function HomeDeskV() {
 								/>
 
 								<div className='container-parrafo-category-twoBoxes'>
-									<p className='parrafo-category'>Ropa</p>;
+									<p className='parrafo-category'>Ropa</p>
 								</div>
 							</div>
 						</NavLink>
@@ -70,7 +70,7 @@ function HomeDeskV() {
 								/>
 
 								<div className='container-parrafo-category-twoBoxes'>
-									<p className='parrafo-category'>Joyería</p>;
+									<p className='parrafo-category'>Joyería</p>
 								</div>
 							</div>
 						</NavLink>

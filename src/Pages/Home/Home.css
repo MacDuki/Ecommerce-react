@@ -6,7 +6,6 @@
 	height: 35rem;
 	max-height: 50rem;
 	overflow: hidden;
-
 	padding: 1rem 0;
 	display: flex;
 	align-items: center;
@@ -42,6 +41,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 1rem 0;
+	position: relative;
 }
 .aElec {
 	display: flex;
@@ -69,6 +69,7 @@
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: scale linear 0.5s;
+	position: relative;
 }
 
 .two-boxes-container div {
@@ -79,11 +80,15 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+	text-align: center;
 }
 .aCloth {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
+	text-align: center;
 }
 
 .two-boxes-container img {
@@ -114,6 +119,7 @@
 	font-weight: 400;
 	font-family: "Titan One", sans-serif;
 	text-align: center;
+	width: 14.8rem;
 }
 
 .container-parrafo-category-twoBoxes {
@@ -122,7 +128,7 @@
 	border-radius: 0.5rem;
 	width: 14.8rem;
 	height: 3rem;
-	bottom: 0.5rem;
+	bottom: 0rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -144,5 +150,19 @@
 
 	.two-boxes-container img {
 		max-width: 10rem;
+	}
+	.two-boxes-container {
+		width: auto;
+	}
+	#parrafo-joy {
+		text-align: left;
+		width: 10rem;
+		margin-left: 1rem;
+	}
+
+	#parrafo-rop {
+		text-align: left;
+		width: 10rem;
+		margin-left: 3rem;
 	}
 }

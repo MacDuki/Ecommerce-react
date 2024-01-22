@@ -2,10 +2,13 @@ import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { shopContext } from "../../Context/Index";
+import globo from "../../assets/Globo.gif";
+import carritoComp from "../../assets/carrito-de-compras.gif";
+import devDinero from "../../assets/devolucion-de-dinero.gif";
+import reloj from "../../assets/reloj.gif";
 import "./Home.css";
 import "./QuienesSomos.css";
 import "./Span.css";
-
 function HomeDeskV() {
 	const { setCategory } = React.useContext(shopContext);
 	return (
@@ -103,14 +106,14 @@ function HomeDeskV() {
 				<div className='quienes-container'>
 					<div className='linea-quienes'>
 						<div>
-							<img loading='lazy' src='src\assets\carrito-de-compras.gif' />
+							<img loading='lazy' src={carritoComp} />
 							<p>
 								Aunque somos un mercado pequeño, encontraras artículos
 								electronicos, ropa y joyas. <br />
 							</p>
 						</div>
 						<div>
-							<img loading='lazy' src='src\assets\Globo.gif' />
+							<img loading='lazy' src={globo} />
 							<p>
 								Desde nuestro pequeño garage hasta tu hogar en cualquier rincón
 								del mundo.
@@ -119,14 +122,14 @@ function HomeDeskV() {
 					</div>
 					<div className='linea-quienes'>
 						<div>
-							<img loading='lazy' src='src\assets\devolucion-de-dinero.gif' />
+							<img loading='lazy' src={devDinero} />
 							<p>
 								Compra con confianza: devolución garantizada ante cualquier
 								desperfecto.
 							</p>
 						</div>
 						<div>
-							<img loading='lazy' src='src\assets\reloj.gif' />
+							<img loading='lazy' src={reloj} />
 							<p>
 								Entendemos tu impaciencia. Con tiempos de espera minimizados,
 								aseguramos una entrega rápida y eficiente.

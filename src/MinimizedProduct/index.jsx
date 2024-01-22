@@ -15,7 +15,7 @@ function MinimizedProduct(product) {
 	} = React.useContext(shopContext);
 
 	const [stopAnimationCheck, setStopAnimationCheck] = useState(
-		"src/assets/check_button_green.gif"
+		"https://ecommerce-react-e965a.web.app/assets/check_button_green.gif"
 	);
 
 	function showProduct(productInfo) {
@@ -38,7 +38,9 @@ function MinimizedProduct(product) {
 		} else {
 			setTimeout(stopGifAnimation, 1000);
 			function stopGifAnimation() {
-				setStopAnimationCheck("src/assets/check_button_green_static.png");
+				setStopAnimationCheck(
+					"https://ecommerce-react-e965a.web.app/assets/check_button_green_static.png"
+				);
 			}
 			return <img src={stopAnimationCheck} className='check-button' />;
 		}

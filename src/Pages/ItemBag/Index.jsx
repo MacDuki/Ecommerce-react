@@ -76,7 +76,7 @@ function ItemBag() {
 							</p>
 							<img
 								className='itembag-cart-image'
-								src='src\assets\empty_cart_image.png'
+								src='https://ecommerce-react-e965a.web.app/assets/empty_cart_image.png'
 							/>
 						</div>
 					)}

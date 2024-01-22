@@ -32,7 +32,7 @@ function HomeMobileV() {
 									onClick={() => {
 										setCategory("electronics");
 									}}
-									src='src\assets\img\electronics-model.jpg'
+									src='https://ecommerce-react-e965a.web.app\assets\electronics-model.jpg'
 								/>
 
 								<div className='container-parrafo-categoryE'>
@@ -53,7 +53,7 @@ function HomeMobileV() {
 										onClick={() => {
 											setCategory("clothing");
 										}}
-										src='src\assets\img\clothing-model.jpeg'
+										src='https://ecommerce-react-e965a.web.app\assets\clothing-model.jpeg'
 									/>
 
 									<div className='container-parrafo-category-twoBoxes'>
@@ -70,7 +70,7 @@ function HomeMobileV() {
 										onClick={() => {
 											setCategory("jewelery");
 										}}
-										src='src\assets\img\jewelery-model.jpeg'
+										src='https://ecommerce-react-e965a.web.app\assets\jewelery-model.jpeg'
 									/>
 
 									<div className='container-parrafo-category-twoBoxes'>
@@ -89,7 +89,10 @@ function HomeMobileV() {
 					initial={{ x: -500, opacity: 0 }}
 					transition={{ type: "linear", duration: 1 }}
 					className='middle-span-home'>
-					<img loading='lazy' src='src\assets\img\mini-logo-model.jpeg' />
+					<img
+						loading='lazy'
+						src='https://ecommerce-react-e965a.web.app\assets\mini-logo-model.jpeg'
+					/>
 				</motion.div>
 				<motion.section
 					layout
@@ -110,14 +113,20 @@ function HomeMobileV() {
 					<div className='quienes-container'>
 						<div className='linea-quienes'>
 							<div>
-								<img loading='lazy' src='src\assets\carrito-de-compras.gif' />
+								<img
+									loading='lazy'
+									src='https://ecommerce-react-e965a.web.app\assets\carrito-de.compras.gif'
+								/>
 								<p>
 									Aunque somos un mercado pequeño, encontraras artículos
 									electronicos, ropa y joyas. <br />
 								</p>
 							</div>
 							<div>
-								<img loading='lazy' src='src\assets\Globo.gif' />
+								<img
+									loading='lazy'
+									src='https://ecommerce-react-e965a.web.app\assets\Globo.gif'
+								/>
 								<p>
 									Desde nuestro pequeño garage hasta tu hogar en cualquier
 									rincón del mundo.
@@ -126,14 +135,20 @@ function HomeMobileV() {
 						</div>
 						<div className='linea-quienes'>
 							<div>
-								<img loading='lazy' src='src\assets\devolucion-de-dinero.gif' />
+								<img
+									loading='lazy'
+									src='https://ecommerce-react-e965a.web.app\assets\devolucion-de-dinero.gif'
+								/>
 								<p>
 									Compra con confianza: devolución garantizada ante cualquier
 									desperfecto.
 								</p>
 							</div>
 							<div>
-								<img loading='lazy' src='src\assets\reloj.gif' />
+								<img
+									loading='lazy'
+									src='https://ecommerce-react-e965a.web.app\assets\reloj.gif'
+								/>
 								<p>
 									Entendemos tu impaciencia. Con tiempos de espera minimizados,
 									aseguramos una entrega rápida y eficiente.

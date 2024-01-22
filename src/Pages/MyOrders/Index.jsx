@@ -14,7 +14,7 @@ function MyOrders() {
 					<p className='empty-historial'>
 						Aquí aparecerá tu historial de compras
 					</p>
-					<img src='src\assets\pablita-list-is-empty.png' />
+					<img src='https://ecommerce-react-e965a.web.app/assets/pablita-list-is-empty.png' />
 				</div>
 			)}
 		</>

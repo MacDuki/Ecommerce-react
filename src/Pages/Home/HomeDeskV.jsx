@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { shopContext } from "../../Context/Index";
-import globo from "../../assets/Globo.gif";
 import carritoComp from "../../assets/carrito-de-compras.gif";
 import devDinero from "../../assets/devolucion-de-dinero.gif";
-import reloj from "../../assets/reloj.gif";
 import "./Home.css";
 import "./QuienesSomos.css";
 import "./Span.css";
 function HomeDeskV() {
 	const { setCategory } = React.useContext(shopContext);
+	const reloj = "./assets/reloj.gif";
+
 	return (
 		<>
 			<motion.section
@@ -129,7 +129,7 @@ function HomeDeskV() {
 							</p>
 						</div>
 						<div>
-							<img loading='lazy' src={reloj} />
+							<img src='https://ecommerce-react-e965a.web.app\assets\reloj.gif' />
 							<p>
 								Entendemos tu impaciencia. Con tiempos de espera minimizados,
 								aseguramos una entrega rápida y eficiente.
